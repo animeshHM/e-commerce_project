@@ -5,16 +5,17 @@
  * Variants: no
  *
  * Fields Summary:
- * - studentId [input]
+ * - Men [classificationstore]
+ * - Women [classificationstore]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'student',
-   'name' => 'Student',
+   'id' => '1',
+   'name' => 'Clothing',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672642441,
+   'modificationDate' => 1672739600,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -63,9 +64,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'studentId',
-             'title' => 'Student Id',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+             'name' => 'Men',
+             'title' => 'Men',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -74,7 +75,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'classificationstore',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -82,16 +83,79 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
+             'children' => 
             array (
             ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
+             'region' => NULL,
+             'layout' => NULL,
+             'width' => 0,
+             'height' => 0,
+             'maxTabs' => NULL,
+             'labelWidth' => 0,
+             'localized' => false,
+             'storeId' => 1,
+             'hideEmptyData' => false,
+             'disallowAddRemove' => false,
+             'referencedFields' => 
+            array (
+            ),
+             'fieldDefinitionsCache' => NULL,
+             'allowedGroupIds' => 
+            array (
+            ),
+             'activeGroupDefinitions' => 
+            array (
+            ),
+             'maxItems' => NULL,
+             'permissionView' => NULL,
+             'permissionEdit' => NULL,
+          )),
+          1 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+             'name' => 'Women',
+             'title' => 'Women',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'classificationstore',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'children' => 
+            array (
+            ),
+             'region' => NULL,
+             'layout' => NULL,
+             'width' => 0,
+             'height' => 0,
+             'maxTabs' => NULL,
+             'labelWidth' => 0,
+             'localized' => false,
+             'storeId' => 2,
+             'hideEmptyData' => false,
+             'disallowAddRemove' => false,
+             'referencedFields' => 
+            array (
+            ),
+             'fieldDefinitionsCache' => NULL,
+             'allowedGroupIds' => 
+            array (
+            ),
+             'activeGroupDefinitions' => 
+            array (
+            ),
+             'maxItems' => NULL,
+             'permissionView' => NULL,
+             'permissionEdit' => NULL,
           )),
         ),
          'locked' => false,
@@ -119,7 +183,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
   )),
    'icon' => '',
    'previewUrl' => '',
-   'group' => 'demo',
+   'group' => '',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
