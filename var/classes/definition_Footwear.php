@@ -5,16 +5,15 @@
  * Variants: no
  *
  * Fields Summary:
- * - studentId [input]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-   'id' => 'student',
-   'name' => 'Student',
+   'id' => '1',
+   'name' => 'Footwear',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672642441,
+   'modificationDate' => 1672762219,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -62,37 +61,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'permissions' => NULL,
          'children' => 
         array (
-          0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'studentId',
-             'title' => 'Student Id',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'input',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
-          )),
         ),
          'locked' => false,
          'blockedVarsForExport' => 
@@ -119,7 +87,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
   )),
    'icon' => '',
    'previewUrl' => '',
-   'group' => 'demo',
+   'group' => '',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
