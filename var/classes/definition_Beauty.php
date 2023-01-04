@@ -5,46 +5,23 @@
  * Variants: no
  *
  * Fields Summary:
-<<<<<<< HEAD
-<<<<<<< HEAD:var/classes/definition_Footwear.php
-=======
- * - sku [input]
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
+ * - Makeup [objectbricks]
+ * - Skincare [objectbricks]
+ * - Haircare [objectbricks]
+ * - Perfumes [objectbricks]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-<<<<<<< HEAD
-<<<<<<< HEAD:var/classes/definition_Footwear.php
-   'id' => '1',
-   'name' => 'Footwear',
+   'id' => '3',
+   'name' => 'Beauty',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672762219,
-=======
-   'id' => '4',
-   'name' => 'Electronics',
-   'description' => '',
-   'creationDate' => 0,
-   'modificationDate' => 1672740519,
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
+   'modificationDate' => 1672739741,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
    'implementsInterfaces' => '',
-=======
-   'id' => '2',
-   'name' => 'Footwear',
-   'description' => '',
-   'creationDate' => NULL,
-   'modificationDate' => 1672732233,
-   'userOwner' => 2,
-   'userModification' => NULL,
-   'parentClass' => '',
-   'implementsInterfaces' => NULL,
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
    'listingParentClass' => '',
    'useTraits' => '',
    'listingUseTraits' => '',
@@ -58,7 +35,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'fieldDefinitions' => 
   array (
   ),
-<<<<<<< HEAD
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
@@ -89,12 +65,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'permissions' => NULL,
          'children' => 
         array (
-<<<<<<< HEAD:var/classes/definition_Footwear.php
-=======
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'sku',
-             'title' => 'Sku',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+             'name' => 'Makeup',
+             'title' => 'Makeup',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -103,7 +77,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'objectbricks',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -111,18 +85,90 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
+             'allowedTypes' => 
             array (
             ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
+             'maxItems' => NULL,
+             'border' => false,
           )),
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
+          1 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+             'name' => 'Skincare',
+             'title' => 'Skincare',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'objectbricks',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'allowedTypes' => 
+            array (
+            ),
+             'maxItems' => NULL,
+             'border' => false,
+          )),
+          2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+             'name' => 'Haircare',
+             'title' => 'Haircare',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'objectbricks',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'allowedTypes' => 
+            array (
+            ),
+             'maxItems' => NULL,
+             'border' => false,
+          )),
+          3 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+             'name' => 'Perfumes',
+             'title' => 'Perfumes',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'objectbricks',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'allowedTypes' => 
+            array (
+            ),
+             'maxItems' => NULL,
+             'border' => false,
+          )),
         ),
          'locked' => false,
          'blockedVarsForExport' => 
@@ -153,15 +199,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
-=======
-   'layoutDefinitions' => NULL,
-   'icon' => NULL,
-   'previewUrl' => NULL,
-   'group' => NULL,
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => NULL,
-   'previewGeneratorReference' => NULL,
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
    'compositeIndices' => 
   array (
   ),
@@ -172,10 +209,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     'grid' => 
     array (
       'id' => true,
-<<<<<<< HEAD
       'key' => false,
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
       'path' => true,
       'published' => true,
       'modificationDate' => true,
@@ -184,10 +218,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     'search' => 
     array (
       'id' => true,
-<<<<<<< HEAD
       'key' => false,
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
       'path' => true,
       'published' => true,
       'modificationDate' => true,

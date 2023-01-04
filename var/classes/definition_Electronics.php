@@ -5,18 +5,14 @@
  * Variants: no
  *
  * Fields Summary:
-<<<<<<< HEAD
 <<<<<<< HEAD:var/classes/definition_Footwear.php
 =======
  * - sku [input]
 >>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-<<<<<<< HEAD
 <<<<<<< HEAD:var/classes/definition_Footwear.php
    'id' => '1',
    'name' => 'Footwear',
@@ -34,17 +30,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'userModification' => 2,
    'parentClass' => '',
    'implementsInterfaces' => '',
-=======
-   'id' => '2',
-   'name' => 'Footwear',
-   'description' => '',
-   'creationDate' => NULL,
-   'modificationDate' => 1672732233,
-   'userOwner' => 2,
-   'userModification' => NULL,
-   'parentClass' => '',
-   'implementsInterfaces' => NULL,
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
    'listingParentClass' => '',
    'useTraits' => '',
    'listingUseTraits' => '',
@@ -58,7 +43,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'fieldDefinitions' => 
   array (
   ),
-<<<<<<< HEAD
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
@@ -153,15 +137,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
-=======
-   'layoutDefinitions' => NULL,
-   'icon' => NULL,
-   'previewUrl' => NULL,
-   'group' => NULL,
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => NULL,
-   'previewGeneratorReference' => NULL,
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
    'compositeIndices' => 
   array (
   ),
@@ -172,10 +147,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     'grid' => 
     array (
       'id' => true,
-<<<<<<< HEAD
       'key' => false,
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
       'path' => true,
       'published' => true,
       'modificationDate' => true,
@@ -184,10 +156,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     'search' => 
     array (
       'id' => true,
-<<<<<<< HEAD
       'key' => false,
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e
       'path' => true,
       'published' => true,
       'modificationDate' => true,
