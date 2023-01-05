@@ -5,35 +5,15 @@
  * Variants: no
  *
  * Fields Summary:
-<<<<<<< HEAD:var/classes/definition_Footwear.php
-=======
- * - sku [input]
-<<<<<<< HEAD
- * - quantity [numeric]
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
->>>>>>> 16e1cf5b05813b92e515e85ae10c4f38c12b975e
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
-<<<<<<< HEAD:var/classes/definition_Footwear.php
-   'id' => '1',
-   'name' => 'Footwear',
-   'description' => '',
-   'creationDate' => 0,
-   'modificationDate' => 1672762219,
-=======
    'id' => '4',
    'name' => 'Electronics',
    'description' => '',
    'creationDate' => 0,
-<<<<<<< HEAD
-   'modificationDate' => 1672814658,
-=======
-   'modificationDate' => 1672740519,
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
->>>>>>> 16e1cf5b05813b92e515e85ae10c4f38c12b975e
+   'modificationDate' => 1672897116,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -81,74 +61,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'permissions' => NULL,
          'children' => 
         array (
-<<<<<<< HEAD:var/classes/definition_Footwear.php
-=======
-          0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'sku',
-             'title' => 'Sku',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'input',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
-          )),
-<<<<<<< HEAD
-          1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
-             'name' => 'quantity',
-             'title' => 'Quantity',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'numeric',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'integer' => false,
-             'unsigned' => false,
-             'minValue' => NULL,
-             'maxValue' => NULL,
-             'unique' => false,
-             'decimalSize' => NULL,
-             'decimalPrecision' => NULL,
-             'defaultValueGenerator' => '',
-          )),
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
->>>>>>> 16e1cf5b05813b92e515e85ae10c4f38c12b975e
         ),
          'locked' => false,
          'blockedVarsForExport' => 
@@ -175,7 +87,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
   )),
    'icon' => '',
    'previewUrl' => '',
-   'group' => '',
+   'group' => 'Ecommerce',
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
