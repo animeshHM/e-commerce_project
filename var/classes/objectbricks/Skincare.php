@@ -3,7 +3,7 @@
 /**
  * Fields Summary:
  * - FacewashType [select]
- * - Brand [multiselect]
+ * - BrandPreference [multiselect]
  * - Formulation [multiselect]
  * - KeyIngredient [multiselect]
  * - SPF [multiselect]
@@ -100,7 +100,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
           1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-             'name' => 'Brand',
+             'name' => 'BrandPreference',
              'title' => 'Brand',
              'tooltip' => '',
              'mandatory' => false,
