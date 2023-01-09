@@ -1,44 +1,23 @@
 <?php
 
 /**
- * Inheritance: no
- * Variants: no
- *
  * Fields Summary:
- * - modelNumber [input]
- * - price [quantityValue]
+ * - length [quantityValue]
+ * - width [quantityValue]
+ * - height [quantityValue]
  * - weight [quantityValue]
- * - dimensions [fieldcollections]
- * - electronicItem [objectbricks]
  */
 
-return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
+return Pimcore\Model\DataObject\Fieldcollection\Definition::__set_state(array(
    'dao' => NULL,
-   'id' => '4',
-   'name' => 'Electronics',
-   'description' => '',
-   'creationDate' => 0,
-   'modificationDate' => 1672996248,
-   'userOwner' => 2,
-   'userModification' => 2,
+   'key' => 'dimensions',
    'parentClass' => '',
    'implementsInterfaces' => '',
-   'listingParentClass' => '',
-   'useTraits' => '',
-   'listingUseTraits' => '',
-   'encryption' => false,
-   'encryptedTables' => 
-  array (
-  ),
-   'allowInherit' => false,
-   'allowVariants' => false,
-   'showVariants' => false,
-   'fieldDefinitions' => 
-  array (
-  ),
+   'title' => '',
+   'group' => '',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-     'name' => 'pimcore_root',
+     'name' => NULL,
      'type' => NULL,
      'region' => NULL,
      'title' => NULL,
@@ -67,9 +46,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'modelNumber',
-             'title' => 'Model Number',
+          Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
+             'name' => 'length',
+             'title' => 'Length',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -78,7 +57,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'quantityValue',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -87,20 +66,26 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
             ),
              'width' => '',
+             'unitWidth' => '',
              'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
+             'defaultUnit' => NULL,
+             'validUnits' => 
             array (
             ),
+             'integer' => false,
+             'unsigned' => false,
+             'minValue' => NULL,
+             'maxValue' => NULL,
              'unique' => false,
-             'showCharCount' => false,
+             'decimalSize' => NULL,
+             'decimalPrecision' => NULL,
+             'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
           1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
-             'name' => 'price',
-             'title' => 'Price',
+             'name' => 'width',
+             'title' => 'Width',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -136,8 +121,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
           )),
           2 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
-             'name' => 'weight',
-             'title' => 'Weight',
+             'name' => 'height',
+             'title' => 'Height',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -172,9 +157,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           3 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
-             'name' => 'dimensions',
-             'title' => 'Dimensions',
+          Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
+             'name' => 'weight',
+             'title' => 'Weight',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -183,7 +168,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'fieldcollections',
+             'fieldtype' => 'quantityValue',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -191,44 +176,22 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'allowedTypes' => 
+             'width' => '',
+             'unitWidth' => '',
+             'defaultValue' => NULL,
+             'defaultUnit' => NULL,
+             'validUnits' => 
             array (
             ),
-             'lazyLoading' => true,
-             'maxItems' => NULL,
-             'disallowAddRemove' => false,
-             'disallowReorder' => false,
-             'collapsed' => false,
-             'collapsible' => false,
-             'border' => false,
-          )),
-          4 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-             'name' => 'electronicItem',
-             'title' => 'Electronic Item',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'objectbricks',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'allowedTypes' => 
-            array (
-              0 => 'Mobile',
-              1 => 'Laptop',
-            ),
-             'maxItems' => NULL,
-             'border' => false,
+             'integer' => false,
+             'unsigned' => false,
+             'minValue' => NULL,
+             'maxValue' => NULL,
+             'unique' => NULL,
+             'decimalSize' => NULL,
+             'decimalPrecision' => NULL,
+             'autoConvert' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,
@@ -254,46 +217,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelWidth' => 100,
      'labelAlign' => 'left',
   )),
-   'icon' => '',
-   'previewUrl' => '',
-   'group' => 'Ecommerce',
-   'showAppLoggerTab' => false,
-   'linkGeneratorReference' => '',
-   'previewGeneratorReference' => '',
-   'compositeIndices' => 
-  array (
-  ),
    'generateTypeDeclarations' => true,
-   'showFieldLookup' => false,
-   'propertyVisibility' => 
-  array (
-    'grid' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-    'search' => 
-    array (
-      'id' => true,
-      'key' => false,
-      'path' => true,
-      'published' => true,
-      'modificationDate' => true,
-      'creationDate' => true,
-    ),
-  ),
-   'enableGridLocking' => false,
-   'deletedDataComponents' => 
-  array (
-  ),
    'blockedVarsForExport' => 
-  array (
-  ),
-   'activeDispatchingEvents' => 
   array (
   ),
 ));
