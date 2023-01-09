@@ -7,6 +7,7 @@
  * Fields Summary:
  * - productID [input]
  * - productName [input]
+ * - description [wysiwyg]
  * - productImage [image]
  * - price [quantityValue]
  * - dimensions [fieldcollections]
@@ -20,7 +21,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronics',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673015585,
+   'modificationDate' => 1673263780,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -29,16 +30,16 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'useTraits' => '',
    'listingUseTraits' => '',
    'encryption' => false,
-   'encryptedTables' =>
+   'encryptedTables' => 
   array (
   ),
    'allowInherit' => false,
    'allowVariants' => false,
    'showVariants' => false,
-   'fieldDefinitions' =>
+   'fieldDefinitions' => 
   array (
   ),
-   'layoutDefinitions' =>
+   'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => 'pimcore_root',
      'type' => NULL,
@@ -51,9 +52,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'bodyStyle' => NULL,
      'datatype' => 'layout',
      'permissions' => NULL,
-     'children' =>
+     'children' => 
     array (
-      0 =>
+      0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
@@ -66,14 +67,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'bodyStyle' => '',
          'datatype' => 'layout',
          'permissions' => NULL,
-         'children' =>
+         'children' => 
         array (
-          0 =>
+          0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'productID',
              'title' => 'Product ID',
              'tooltip' => '',
-             'mandatory' => false,
+             'mandatory' => true,
              'noteditable' => false,
              'index' => false,
              'locked' => false,
@@ -85,21 +86,21 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'defaultValue' => NULL,
              'columnLength' => 190,
              'regex' => '',
-             'regexFlags' =>
+             'regexFlags' => 
             array (
             ),
-             'unique' => false,
+             'unique' => true,
              'showCharCount' => false,
              'defaultValueGenerator' => '',
           )),
-          1 =>
+          1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'productName',
              'title' => 'Product Name',
@@ -116,21 +117,47 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'defaultValue' => NULL,
              'columnLength' => 190,
              'regex' => '',
-             'regexFlags' =>
+             'regexFlags' => 
             array (
             ),
              'unique' => false,
              'showCharCount' => false,
              'defaultValueGenerator' => '',
           )),
-          2 =>
+          2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
+             'name' => 'description',
+             'title' => 'Description',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'wysiwyg',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'height' => '',
+             'toolbarConfig' => '',
+             'excludeFromSearchIndex' => false,
+             'maxCharacters' => '',
+          )),
+          3 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
              'name' => 'productImage',
              'title' => 'Product Image',
@@ -147,14 +174,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'height' => '',
              'uploadPath' => '',
           )),
-          3 =>
+          4 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'price',
              'title' => 'Price',
@@ -171,14 +198,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
              'defaultUnit' => 'rupees',
-             'validUnits' =>
+             'validUnits' => 
             array (
               0 => 'rupees',
             ),
@@ -192,7 +219,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          4 =>
+          5 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
              'name' => 'dimensions',
              'title' => 'Dimensions',
@@ -209,10 +236,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
-             'allowedTypes' =>
+             'allowedTypes' => 
             array (
               0 => 'dimensions',
             ),
@@ -224,7 +251,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'collapsible' => false,
              'border' => false,
           )),
-          5 =>
+          6 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\RgbaColor::__set_state(array(
              'name' => 'color',
              'title' => 'Color',
@@ -241,12 +268,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
           )),
-          6 =>
+          7 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
              'name' => 'electronicItem',
              'title' => 'Electronic Item',
@@ -263,10 +290,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
-             'allowedTypes' =>
+             'allowedTypes' => 
             array (
               0 => 'Laptop',
               1 => 'Mobile',
@@ -278,7 +305,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
           )),
         ),
          'locked' => false,
-         'blockedVarsForExport' =>
+         'blockedVarsForExport' => 
         array (
         ),
          'fieldtype' => 'panel',
@@ -290,7 +317,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
       )),
     ),
      'locked' => false,
-     'blockedVarsForExport' =>
+     'blockedVarsForExport' => 
     array (
     ),
      'fieldtype' => 'panel',
@@ -306,14 +333,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'showAppLoggerTab' => false,
    'linkGeneratorReference' => '',
    'previewGeneratorReference' => '',
-   'compositeIndices' =>
+   'compositeIndices' => 
   array (
   ),
    'generateTypeDeclarations' => true,
    'showFieldLookup' => false,
-   'propertyVisibility' =>
+   'propertyVisibility' => 
   array (
-    'grid' =>
+    'grid' => 
     array (
       'id' => true,
       'key' => false,
@@ -322,7 +349,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
       'modificationDate' => true,
       'creationDate' => true,
     ),
-    'search' =>
+    'search' => 
     array (
       'id' => true,
       'key' => false,
@@ -333,13 +360,13 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     ),
   ),
    'enableGridLocking' => false,
-   'deletedDataComponents' =>
+   'deletedDataComponents' => 
   array (
   ),
-   'blockedVarsForExport' =>
+   'blockedVarsForExport' => 
   array (
   ),
-   'activeDispatchingEvents' =>
+   'activeDispatchingEvents' => 
   array (
   ),
 ));

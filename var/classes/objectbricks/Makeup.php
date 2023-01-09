@@ -2,6 +2,7 @@
 
 /**
  * Fields Summary:
+ * - Brands [multiselect]
  * - EyeMakeup [multiselect]
  * - Shades [multiselect]
  * - Features [select]
@@ -11,7 +12,6 @@
  * - LipstikFinish [multiselect]
  * - Pigmentation [select]
  * - ColourFamily [multiselect]
- * - Brands [multiselect]
  * - FaceMakeup [multiselect]
  * - SkinTone [select]
  * - Finish [select]
@@ -30,7 +30,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'parentClass' => '',
    'implementsInterfaces' => '',
    'title' => '',
-   'group' => '',
+   'group' => 'Beauty',
    'layoutDefinitions' =>
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => NULL,
@@ -62,6 +62,89 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'children' =>
         array (
           0 =>
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'CommonAttributes',
+             'type' => NULL,
+             'region' => NULL,
+             'title' => '',
+             'width' => '',
+             'height' => '',
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => '',
+             'datatype' => 'layout',
+             'permissions' => NULL,
+             'children' =>
+            array (
+              0 =>
+              Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+                 'name' => 'Brands',
+                 'title' => 'Brands',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'multiselect',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' =>
+                array (
+                ),
+                 'options' =>
+                array (
+                  0 =>
+                  array (
+                    'key' => 'Lakme',
+                    'value' => 'Lakme',
+                  ),
+                  1 =>
+                  array (
+                    'key' => 'Colorbar',
+                    'value' => 'Colorbar',
+                  ),
+                  2 =>
+                  array (
+                    'key' => 'Sugar',
+                    'value' => 'Sugar',
+                  ),
+                  3 =>
+                  array (
+                    'key' => 'Mac',
+                    'value' => 'Mac',
+                  ),
+                  4 =>
+                  array (
+                    'key' => 'Revlon',
+                    'value' => 'Revlon',
+                  ),
+                ),
+                 'width' => '',
+                 'height' => '',
+                 'maxItems' => NULL,
+                 'renderType' => 'list',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'dynamicOptions' => false,
+              )),
+            ),
+             'locked' => false,
+             'blockedVarsForExport' =>
+            array (
+            ),
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => false,
+             'icon' => '',
+             'labelWidth' => 0,
+             'labelAlign' => 'left',
+          )),
+          1 =>
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'EyeMakeup',
              'type' => NULL,
@@ -332,7 +415,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
-          1 =>
+          2 =>
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'LipMakeup',
              'type' => NULL,
@@ -622,89 +705,6 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                   array (
                     'key' => 'Pink',
                     'value' => 'Pink',
-                  ),
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'maxItems' => NULL,
-                 'renderType' => 'list',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'dynamicOptions' => false,
-              )),
-            ),
-             'locked' => false,
-             'blockedVarsForExport' =>
-            array (
-            ),
-             'fieldtype' => 'panel',
-             'layout' => NULL,
-             'border' => false,
-             'icon' => '',
-             'labelWidth' => 0,
-             'labelAlign' => 'left',
-          )),
-          2 =>
-          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-             'name' => 'Brands',
-             'type' => NULL,
-             'region' => NULL,
-             'title' => 'Brands',
-             'width' => '',
-             'height' => '',
-             'collapsible' => false,
-             'collapsed' => false,
-             'bodyStyle' => '',
-             'datatype' => 'layout',
-             'permissions' => NULL,
-             'children' =>
-            array (
-              0 =>
-              Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                 'name' => 'Brands',
-                 'title' => 'Brands',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'multiselect',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' =>
-                array (
-                ),
-                 'options' =>
-                array (
-                  0 =>
-                  array (
-                    'key' => 'Lakme',
-                    'value' => 'Lakme',
-                  ),
-                  1 =>
-                  array (
-                    'key' => 'Colorbar',
-                    'value' => 'Colorbar',
-                  ),
-                  2 =>
-                  array (
-                    'key' => 'Sugar',
-                    'value' => 'Sugar',
-                  ),
-                  3 =>
-                  array (
-                    'key' => 'Mac',
-                    'value' => 'Mac',
-                  ),
-                  4 =>
-                  array (
-                    'key' => 'Revlon',
-                    'value' => 'Revlon',
                   ),
                 ),
                  'width' => '',
