@@ -170,10 +170,65 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'decimalPrecision' => NULL,
              'autoConvert' => false,
              'defaultValueGenerator' => '',
+          )),3 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
+             'name' => 'dimensions',
+             'title' => 'Dimensions',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'fieldcollections',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'allowedTypes' => 
+            array (
+            ),
+             'lazyLoading' => true,
+             'maxItems' => NULL,
+             'disallowAddRemove' => false,
+             'disallowReorder' => false,
+             'collapsed' => false,
+             'collapsible' => false,
+             'border' => false,
           )),
-=======
->>>>>>> d4ecd8d33552d7ed220a2d5529ff89dbe408657e:var/classes/definition_Electronics.php
->>>>>>> 16e1cf5b05813b92e515e85ae10c4f38c12b975e
+          4 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+             'name' => 'electronicItem',
+             'title' => 'Electronic Item',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'objectbricks',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'allowedTypes' => 
+            array (
+              0 => 'Mobile',
+              1 => 'Laptop',
+            ),
+             'maxItems' => NULL,
+             'border' => false,
+          )),
         ),
          'locked' => false,
          'blockedVarsForExport' => 
