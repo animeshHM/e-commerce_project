@@ -15,7 +15,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Clothing',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672996666,
+   'modificationDate' => 1672903401,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
