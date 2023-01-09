@@ -7,8 +7,8 @@
  * Fields Summary:
  * - productID [input]
  * - productName [input]
- * - description [wysiwyg]
  * - productImage [image]
+ * - description [wysiwyg]
  * - price [quantityValue]
  * - dimensions [fieldcollections]
  * - color [rgbaColor]
@@ -21,7 +21,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronics',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673263780,
+   'modificationDate' => 1673264631,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -132,6 +132,30 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+             'name' => 'productImage',
+             'title' => 'Product Image',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'image',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'height' => '',
+             'uploadPath' => '',
+          )),
+          3 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
              'name' => 'description',
              'title' => 'Description',
@@ -156,30 +180,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'toolbarConfig' => '',
              'excludeFromSearchIndex' => false,
              'maxCharacters' => '',
-          )),
-          3 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
-             'name' => 'productImage',
-             'title' => 'Product Image',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'image',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => '',
-             'height' => '',
-             'uploadPath' => '',
           )),
           4 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
