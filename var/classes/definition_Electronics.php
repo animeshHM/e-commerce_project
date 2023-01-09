@@ -18,7 +18,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronics',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672997237,
+   'modificationDate' => 1673247266,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -71,7 +71,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'name' => 'modelNumber',
              'title' => 'Model Number',
              'tooltip' => '',
-             'mandatory' => false,
+             'mandatory' => true,
              'noteditable' => false,
              'index' => false,
              'locked' => false,
@@ -93,7 +93,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'regexFlags' => 
             array (
             ),
-             'unique' => false,
+             'unique' => true,
              'showCharCount' => false,
              'defaultValueGenerator' => '',
           )),
