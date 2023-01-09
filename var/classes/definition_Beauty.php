@@ -5,17 +5,21 @@
  * Variants: no
  *
  * Fields Summary:
+ * - ModelNumber [input]
  * - Makeup [objectbricks]
  * - Cost [slider]
  * - Quantity [numeric]
+ * - ModelNumber1 [input]
  * - Formulation [multiselect]
  * - Fragrance [multiselect]
  * - PerfumeCost [slider]
  * - PerfumeQuantity [numeric]
  * - PerfumesBrand [multiselect]
+ * - ModelNumber2 [input]
  * - Skincare [objectbricks]
  * - SkinCareQuantity [numeric]
  * - SkinCareCost [slider]
+ * - ModelNumber3 [input]
  * - HaircareType [select]
  * - HairType [multiselect]
  * - KeyIngredients [multiselect]
@@ -30,7 +34,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Beauty',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672902908,
+   'modificationDate' => 1673246447,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -94,6 +98,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'ModelNumber',
+                 'title' => 'ModelNumber',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
                  'name' => 'Makeup',
                  'title' => 'Makeup',
@@ -120,7 +155,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'border' => false,
               )),
-              1 => 
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'Cost',
                  'title' => 'Cost',
@@ -148,7 +183,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'increment' => NULL,
                  'decimalPrecision' => NULL,
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'Quantity',
                  'title' => 'Quantity',
@@ -207,6 +242,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'ModelNumber1',
+                 'title' => 'ModelNumber',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                  'name' => 'Formulation',
                  'title' => 'Formulation',
@@ -262,7 +328,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
               )),
-              1 => 
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                  'name' => 'Fragrance',
                  'title' => 'Fragrance',
@@ -313,7 +379,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'PerfumeCost',
                  'title' => 'PerfumeCost',
@@ -341,7 +407,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'increment' => NULL,
                  'decimalPrecision' => NULL,
               )),
-              3 => 
+              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'PerfumeQuantity',
                  'title' => 'Perfume Quantity',
@@ -372,7 +438,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              4 => 
+              5 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                  'name' => 'PerfumesBrand',
                  'title' => 'Perfumes Brand',
@@ -451,6 +517,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'ModelNumber2',
+                 'title' => 'ModelNumber',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
                  'name' => 'Skincare',
                  'title' => 'Skincare',
@@ -477,7 +574,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'border' => false,
               )),
-              1 => 
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'SkinCareQuantity',
                  'title' => 'Skin Care Quantity',
@@ -508,7 +605,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'SkinCareCost',
                  'title' => 'Skin Care Cost',
@@ -564,6 +661,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'ModelNumber3',
+                 'title' => 'ModelNumber',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'HaircareType',
                  'title' => 'Type',
@@ -609,7 +737,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
-              1 => 
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                  'name' => 'HairType',
                  'title' => 'Hair Type',
@@ -655,7 +783,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                  'name' => 'KeyIngredients',
                  'title' => 'Key Ingredients',
@@ -706,7 +834,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
               )),
-              3 => 
+              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                  'name' => 'Preference',
                  'title' => 'Preference',
@@ -752,7 +880,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
               )),
-              4 => 
+              5 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'Costs',
                  'title' => 'Costs',
@@ -780,7 +908,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'increment' => NULL,
                  'decimalPrecision' => NULL,
               )),
-              5 => 
+              6 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'Quantities',
                  'title' => 'Quantities',
