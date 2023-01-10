@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electronics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    {{ pimcore_snippet("header") }}
+    {% for object in object %}
+    <div class="row row-cols-3 row-cols-md-3 g-4">
+        {# <div class="col"> #}
+            <div class="card h-100">
+                <img src="{{ object.getProductImage }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">ProductName: {{ object.getProductName }}</h5>
+                    <p class="card-text">ProductID: {{ object.getProductID }}</p>
+                    <p class="card-text">ProductImage: {{ object.getProductImage }}</p>
+                    <p class="card-text">Description: {{ object.getDescription }}</p>
+                    <p class="card-text">Price: {{ object.getPrice }}</p>
+                    {# <p class="card-text">Brand: {{ object.getDimensions.getLength }}</p>
+                    <p class="card-text">Brand: {{ object.getDimensions.getWidth }}</p>
+                    <p class="card-text">Brand: {{ object.getDimensions.getHeight }}</p>
+                    <p class="card-text">Brand: {{ object.getDimensions.getWeight }}</p> #}
+                    <p class="card-text">Color: {{ object.getColor }}</p>
+                    <p class="card-text">Quantity: {{ object.getQuantity }}</p>
+                    <p class="card-text">Rating: {{ object.getRating }}</p>
+                    {% if object.getElectronicsType=='Mobile' %}
+                        <p class="card-text">Screen Size: {{ object.getElectronicItem.getMobile.getScreenSize }}</p>
+                        <p class="card-text">RAM: {{ object.getElectronicItem.getMobile.getRAM }}</p>
+                        <p class="card-text">Storage: {{ object.getElectronicItem.getMobile.getStorage }}</p>
+                        <p class="card-text">Battery: {{ object.getElectronicItem.getMobile.getBattery }}</p>
+                        <p class="card-text">Display Type: {{ object.getElectronicItem.getMobile.getDisplayType }}</p>
+                        <p class="card-text">Main Camera Resolution: {{ object.getElectronicItem.getMobile.getMainCameraResolution }}</p>
+                        <p class="card-text">Front Camera Resolution: {{ object.getElectronicItem.getMobile.getFrontCameraResolution }}</p>
+                        <p class="card-text">Camera Count: {{ object.getElectronicItem.getMobile.getCameraCount }}</p>
+                        <p class="card-text">Refresh Rate: {{ object.getElectronicItem.getMobile.getRefreshRate }}</p>
+                        <p class="card-text">Sim Slot Type: {{ object.getElectronicItem.getMobile.getSimSlotType }}</p>
+                        <p class="card-text">Charging Slot Type: {{ object.getElectronicItem.getMobile.getChargingSlotType }}</p>
+                        <p class="card-text">Is 5G Enbled ?: {{ object.getElectronicItem.getMobile.getIs5GEnabled }}</p>
+                        <p class="card-text">Brand: {{ object.getElectronicItem.getMobile.getBrand }}</p>
+                    {% elseif object.getElectronicsType=='Laptop' %}
+                        <p class="card-text">Screen Size: {{ object.getElectronicItem.getLaptop.getScreenSize }}</p>
+                        <p class="card-text">Display Type: {{ object.getElectronicItem.getLaptop.getDisplayType }}</p>
+                        <p class="card-text">CPU Type: {{ object.getElectronicItem.getLaptop.getCPUType }}</p>
+                        <p class="card-text">Processor Count: {{ object.getElectronicItem.getLaptop.getProcessorCount }}</p>
+                        <p class="card-text">Processor Speed: {{ object.getElectronicItem.getLaptop.getProcessorSpeed }}</p>
+                        <p class="card-text">Operating System: {{ object.getElectronicItem.getLaptop.getOperatingSystem}}</p>
+                        <p class="card-text">HDD Size: {{ object.getElectronicItem.getLaptop.getHDDSize }}</p>
+                        <p class="card-text">SSD Size: {{ object.getElectronicItem.getLaptop.getSSDSize }}</p>
+                        <p class="card-text">RAM Size: {{ object.getElectronicItem.getLaptop.getRAMSize }}</p>
+                        <p class="card-text">Screen Size: {{ object.getElectronicItem.getLaptop.getScreenSize }}</p>
+                        <p class="card-text">Camera Resolution: {{ object.getElectronicItem.getLaptop.getCameraResolution }}</p>
+                        <p class="card-text">Screen Resolution: {{ object.getElectronicItem.getLaptop.getScreenResolution }}</p>
+                        <p class="card-text">Graphis Processor: {{ object.getElectronicItem.getLaptop.getGraphicsProcessor }}</p>
+                        <p class="card-text">Battery: {{ object.getElectronicItem.getLaptop.getBattery }}</p>
+                        <p class="card-text">Brand: {{ object.getElectronicItem.getLaptop.getBrand }}</p>
+                    {% elseif object.getElectronicsType=='Refrigerator' %}
+                        <p class="card-text">Capacity: {{ object.getElectronicItem.getRefrigerator.getCapacity }}</p>
+                        <p class="card-text">Door Count: {{ object.getElectronicItem.getRefrigerator.getDoorCount }}</p>
+                        <p class="card-text">Star Rating: {{ object.getElectronicItem.getRefrigerator.getStarRating }}</p>
+                        <p class="card-text">Refrigerator Type: {{ object.getElectronicItem.getRefrigerator.getRefrigeratorType }}</p>
+                        <p class="card-text">Defrosting Type: {{ object.getElectronicItem.getRefrigerator.getDefrostingType }}</p>
+                        <p class="card-text">Shelf Material: {{ object.getElectronicItem.getRefrigerator.getShelfMaterial }}</p>
+                        <p class="card-text">Is Convertible ?: {{ object.getElectronicItem.getRefrigerator.getIsConvertible }}</p>
+                        <p class="card-text">Coolpad Enabled ?: {{ object.getElectronicItem.getRefrigerator.getCoolpadEnabled }}</p>
+                        <p class="card-text">Launch Year: {{ object.getElectronicItem.getRefrigerator.getLaunchYear }}</p>
+                        <p class="card-text">Brand: {{ object.getElectronicItem.getRefrigerator.getBrand }}</p>
+                    {% elseif object.getElectronicsType=='Television' %}
+                        <p class="card-text">Screen Size: {{ object.getElectronicItem.getTelevision.getScreenSize }}</p>
+                        <p class="card-text">Display Type: {{ object.getElectronicItem.getTelevision.getDisplayType }}</p>
+                        <p class="card-text">Resolution: {{ object.getElectronicItem.getTelevision.getResolution }}</p>
+                        <p class="card-text">USB Ports Count: {{ object.getElectronicItem.getTelevision.getUSBPortsCount }}</p>
+                        <p class="card-text">HDMI Ports Count: {{ object.getElectronicItem.getTelevision.getHDMIPortsCount }}</p>
+                        <p class="card-text">Is Smart TV Enabled ?: {{ object.getElectronicItem.getTelevision.getIsSmartTVEnabled }}</p>
+                        <p class="card-text">Mounting Type: {{ object.getElectronicItem.getTelevision.getMountingType }}</p>
+                        <p class="card-text">Brightness: {{ object.getElectronicItem.getTelevision.getBrightness }}</p>
+                        <p class="card-text">Speaker Count: {{ object.getElectronicItem.getTelevision.getSpeakerCount }}</p>
+                        <p class="card-text">Wattage: {{ object.getElectronicItem.getTelevision.getWattage }}</p>
+                        <p class="card-text">Sound Technology: {{ object.getElectronicItem.getTelevision.getSoundTechnology }}</p>
+                        <p class="card-text">Brand: {{ object.getElectronicItem.getTelevision.getBrand }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        {# </div> #}
+        {# <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a short card.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div> #}
+    </div>
+    {% endfor %}
+    {{ pimcore_snippet("footer") }}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -13,7 +13,7 @@
  * - refreshRate [quantityValue]
  * - simSlotType [select]
  * - chargingSlotType [select]
- * - cellularTechnology [multiselect]
+ * - Is5GEnabled [booleanSelect]
  * - brand [select]
  */
 
@@ -24,7 +24,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'implementsInterfaces' => '',
    'title' => '',
    'group' => 'Electronics',
-   'layoutDefinitions' =>
+   'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => NULL,
      'type' => NULL,
@@ -37,11 +37,11 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
      'bodyStyle' => NULL,
      'datatype' => 'layout',
      'permissions' => NULL,
-     'children' =>
+     'children' => 
     array (
-      0 =>
+      0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Mobile',
+         'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
          'title' => 'Mobile',
@@ -52,9 +52,9 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'bodyStyle' => '',
          'datatype' => 'layout',
          'permissions' => NULL,
-         'children' =>
+         'children' => 
         array (
-          0 =>
+          0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'screenSize',
              'title' => 'Screen Size',
@@ -71,14 +71,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
              'defaultUnit' => 'inch',
-             'validUnits' =>
+             'validUnits' => 
             array (
               0 => 'inch',
             ),
@@ -92,7 +92,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          1 =>
+          1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'RAM',
              'title' => 'RAM',
@@ -109,14 +109,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
              'defaultUnit' => 'GB',
-             'validUnits' =>
+             'validUnits' => 
             array (
               0 => 'GB',
             ),
@@ -130,7 +130,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          2 =>
+          2 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'storage',
              'title' => 'Storage',
@@ -147,14 +147,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
              'defaultUnit' => 'GB',
-             'validUnits' =>
+             'validUnits' => 
             array (
               0 => 'GB',
             ),
@@ -168,7 +168,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          3 =>
+          3 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'battery',
              'title' => 'Battery',
@@ -185,14 +185,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
              'defaultUnit' => 'mAh',
-             'validUnits' =>
+             'validUnits' => 
             array (
               0 => 'mAh',
             ),
@@ -206,7 +206,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          4 =>
+          4 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'displayType',
              'title' => 'Display Type',
@@ -223,27 +223,27 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
-             'options' =>
+             'options' => 
             array (
-              0 =>
+              0 => 
               array (
                 'key' => 'AMOLED',
                 'value' => 'AMOLED',
               ),
-              1 =>
+              1 => 
               array (
-                'key' => 'LED',
-                'value' => 'LED',
+                'key' => 'IPS-LCD',
+                'value' => 'IPS-LCD',
               ),
-              2 =>
+              2 => 
               array (
-                'key' => 'LCD',
-                'value' => 'LCD',
+                'key' => 'TFT-LCD',
+                'value' => 'TFT-LCD',
               ),
-              3 =>
+              3 => 
               array (
                 'key' => 'OLED',
                 'value' => 'OLED',
@@ -257,7 +257,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
-          5 =>
+          5 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'mainCameraResolution',
              'title' => 'Main Camera Resolution',
@@ -274,14 +274,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
              'defaultUnit' => 'mp',
-             'validUnits' =>
+             'validUnits' => 
             array (
               0 => 'mp',
             ),
@@ -295,7 +295,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          6 =>
+          6 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'frontCameraResolution',
              'title' => 'Front Camera Resolution',
@@ -312,14 +312,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
              'defaultUnit' => 'mp',
-             'validUnits' =>
+             'validUnits' => 
             array (
               0 => 'mp',
             ),
@@ -333,7 +333,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          7 =>
+          7 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
              'name' => 'cameraCount',
              'title' => 'Camera Count',
@@ -350,7 +350,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
@@ -364,7 +364,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'decimalPrecision' => NULL,
              'defaultValueGenerator' => '',
           )),
-          8 =>
+          8 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'refreshRate',
              'title' => 'Refresh Rate',
@@ -381,26 +381,16 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
-             'validUnits' =>
+             'defaultUnit' => 'hz',
+             'validUnits' => 
             array (
-              0 => 'GB',
-              1 => 'hz',
-              2 => 'inch',
-              3 => 'l',
-              4 => 'mAh',
-              5 => 'mm',
-              6 => 'mp',
-              7 => 'nits',
-              8 => 'px',
-              9 => 'rupees',
-              10 => 'wt',
+              0 => 'hz',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -412,7 +402,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          9 =>
+          9 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'simSlotType',
              'title' => 'Sim Slot Type',
@@ -429,17 +419,17 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
-             'options' =>
+             'options' => 
             array (
-              0 =>
+              0 => 
               array (
                 'key' => 'Hybrid Dual',
                 'value' => 'Hybrid Dual',
               ),
-              1 =>
+              1 => 
               array (
                 'key' => 'Dedicated Dual',
                 'value' => 'Dedicated Dual',
@@ -453,7 +443,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
-          10 =>
+          10 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'chargingSlotType',
              'title' => 'Charging Slot Type',
@@ -470,20 +460,25 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
-             'options' =>
+             'options' => 
             array (
-              0 =>
+              0 => 
               array (
                 'key' => 'Type C',
                 'value' => 'Type C',
               ),
-              1 =>
+              1 => 
               array (
-                'key' => 'USB',
-                'value' => 'USB',
+                'key' => 'Micro USB',
+                'value' => 'Micro USB',
+              ),
+              2 => 
+              array (
+                'key' => 'Apple Lightning Port',
+                'value' => 'Apple Lightning Port',
               ),
             ),
              'width' => '',
@@ -494,10 +489,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
-          11 =>
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-             'name' => 'cellularTechnology',
-             'title' => 'Cellular Technology',
+          11 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
+             'name' => 'Is5GEnabled',
+             'title' => 'Is 5G Enabled',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -506,46 +501,38 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'booleanSelect',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
-             'options' =>
+             'yesLabel' => 'yes',
+             'noLabel' => 'no',
+             'emptyLabel' => 'empty',
+             'options' => 
             array (
-              0 =>
+              0 => 
               array (
-                'key' => '2G',
-                'value' => '2G',
+                'key' => 'empty',
+                'value' => 0,
               ),
-              1 =>
+              1 => 
               array (
-                'key' => '3G',
-                'value' => '3G',
+                'key' => 'yes',
+                'value' => 1,
               ),
-              2 =>
+              2 => 
               array (
-                'key' => '4G',
-                'value' => '4G',
-              ),
-              3 =>
-              array (
-                'key' => '5G',
-                'value' => '5G',
+                'key' => 'no',
+                'value' => -1,
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
-             'optionsProviderClass' => '',
-             'optionsProviderData' => '',
-             'dynamicOptions' => false,
           )),
-          12 =>
+          12 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'brand',
              'title' => 'Brand',
@@ -562,37 +549,37 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'invisible' => false,
              'visibleGridView' => false,
              'visibleSearch' => false,
-             'blockedVarsForExport' =>
+             'blockedVarsForExport' => 
             array (
             ),
-             'options' =>
+             'options' => 
             array (
-              0 =>
+              0 => 
               array (
                 'key' => 'Apple',
                 'value' => 'Apple',
               ),
-              1 =>
+              1 => 
               array (
                 'key' => 'Samsung',
                 'value' => 'Samsung',
               ),
-              2 =>
+              2 => 
               array (
                 'key' => 'OnePlus',
                 'value' => 'OnePlus',
               ),
-              3 =>
+              3 => 
               array (
                 'key' => 'Redmi',
                 'value' => 'Redmi',
               ),
-              4 =>
+              4 => 
               array (
                 'key' => 'Realme',
                 'value' => 'Realme',
               ),
-              5 =>
+              5 => 
               array (
                 'key' => 'Lenovo',
                 'value' => 'Lenovo',
@@ -608,7 +595,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
         ),
          'locked' => false,
-         'blockedVarsForExport' =>
+         'blockedVarsForExport' => 
         array (
         ),
          'fieldtype' => 'panel',
@@ -620,7 +607,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
       )),
     ),
      'locked' => false,
-     'blockedVarsForExport' =>
+     'blockedVarsForExport' => 
     array (
     ),
      'fieldtype' => 'panel',
@@ -631,12 +618,12 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
      'labelAlign' => 'left',
   )),
    'generateTypeDeclarations' => true,
-   'blockedVarsForExport' =>
+   'blockedVarsForExport' => 
   array (
   ),
-   'classDefinitions' =>
+   'classDefinitions' => 
   array (
-    0 =>
+    0 => 
     array (
       'classname' => 'Electronics',
       'fieldname' => 'electronicItem',
