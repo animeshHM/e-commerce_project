@@ -16,4 +16,32 @@ class DefaultController extends FrontendController
     {
         return $this->render('default/default.html.twig');
     }
+
+  /**
+     * @param Request $request
+     * @return Response
+     */
+    public function headerAction(Request $request): Response
+    {
+        return $this->render('default/header.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function footerAction(Request $request): Response
+    {
+        return $this->render('default/footer.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function homeAction(Request $request): Response
+    {
+        return $this->render('default/home.html.twig');
+    }
 }
+

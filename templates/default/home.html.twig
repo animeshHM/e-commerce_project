@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	</head>
+	<title>Ecommerce</title>
+
+<body>
+
+{{pimcore_snippet("headersnippet",)}}
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+	<!-- Indicators/dots -->
+	<div class="carousel-indicators">
+		<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+		<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+		<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+
+	</div>
+
+	<!-- The slideshow/carousel -->
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="HomeImgs/img1.jpg" alt="" class="d-block" style="width:95%">
+		</div>
+		<div class="carousel-item">
+			<img src="HomeImgs/img2.png" alt="" class="d-block" style="width:95%">
+		</div>
+		<div class="carousel-item">
+			<img src="HomeImgs/img3.png" alt="" class="d-block" style="width:95%">
+		</div>
+        <div class="carousel-item">
+			<img src="HomeImgs/img4.png" alt="" class="d-block" style="width:95%">
+		</div>
+        <div class="carousel-item">
+			<img src="HomeImgs/img5.png" alt="" class="d-block" style="width:95%">
+		</div>
+	</div>
+
+	<!-- Left and right controls/icons -->
+	<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon"></span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+		<span class="carousel-control-next-icon"></span>
+	</button>
+</div>
+<br><br>
+
+<!--Deals Body section-->
+<h2>Deals on Top Brands</h2>
+<div class="card-body">
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="HomeImgs/deals1.png" alt="Deals image" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title">BATA</h4>
+            <a href="#" class="btn btn-primary">50% Offer</a>
+        </div>
+    </div>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="HomeImgs/deals2.png" alt="Deals image" style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title">Jane Doe</h4>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+</div>
+<br>
+
+{# <div class="container mt-3">
+  <h2>Deals on Top Brands</h2>
+  <div class="mt-4 p-5 bg-primary text-white rounded">
+    	<img src="HomeImgs/img6.png" alt="" class="d-block" style="width:100%">
+  </div>
+</div> #}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+{{pimcore_snippet("footersnippet",)}}
+
+</body>
+</html>

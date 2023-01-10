@@ -13,6 +13,7 @@
  * - Pigmentation [select]
  * - ColourFamily [multiselect]
  * - FaceMakeup [multiselect]
+ * - MakeupType [select]
  * - SkinTone [select]
  * - Finish [select]
  * - SkinType [select]
@@ -800,7 +801,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               )),
               1 => 
               Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-                 'name' => 'Primer&Foundation&Concealer',
+                 'name' => '',
                  'type' => NULL,
                  'region' => NULL,
                  'title' => '',
@@ -814,6 +815,52 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                  'children' => 
                 array (
                   0 => 
+                  Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                     'name' => 'MakeupType',
+                     'title' => 'Makeup Type',
+                     'tooltip' => '',
+                     'mandatory' => false,
+                     'noteditable' => false,
+                     'index' => false,
+                     'locked' => false,
+                     'style' => '',
+                     'permissions' => NULL,
+                     'datatype' => 'data',
+                     'fieldtype' => 'select',
+                     'relationType' => false,
+                     'invisible' => false,
+                     'visibleGridView' => false,
+                     'visibleSearch' => false,
+                     'blockedVarsForExport' => 
+                    array (
+                    ),
+                     'options' => 
+                    array (
+                      0 => 
+                      array (
+                        'key' => 'Primer',
+                        'value' => 'Primer',
+                      ),
+                      1 => 
+                      array (
+                        'key' => 'Foundation',
+                        'value' => 'Foundation',
+                      ),
+                      2 => 
+                      array (
+                        'key' => 'Concealer',
+                        'value' => 'Concealer',
+                      ),
+                    ),
+                     'width' => '',
+                     'defaultValue' => '',
+                     'optionsProviderClass' => '',
+                     'optionsProviderData' => '',
+                     'columnLength' => 190,
+                     'dynamicOptions' => false,
+                     'defaultValueGenerator' => '',
+                  )),
+                  1 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                      'name' => 'SkinTone',
                      'title' => 'Skin Tone',
@@ -864,7 +911,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                      'dynamicOptions' => false,
                      'defaultValueGenerator' => '',
                   )),
-                  1 => 
+                  2 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                      'name' => 'Finish',
                      'title' => 'Finish',
@@ -920,7 +967,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                      'dynamicOptions' => false,
                      'defaultValueGenerator' => '',
                   )),
-                  2 => 
+                  3 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                      'name' => 'SkinType',
                      'title' => 'Skin Type',
@@ -976,7 +1023,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                      'dynamicOptions' => false,
                      'defaultValueGenerator' => '',
                   )),
-                  3 => 
+                  4 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                      'name' => 'ColourShadeName',
                      'title' => 'Colour Shade Name',
@@ -1027,7 +1074,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                      'optionsProviderData' => '',
                      'dynamicOptions' => false,
                   )),
-                  4 => 
+                  5 => 
                   Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                      'name' => 'Coverage',
                      'title' => 'Coverage',
