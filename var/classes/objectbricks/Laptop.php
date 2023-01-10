@@ -78,9 +78,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'inch',
              'validUnits' => 
             array (
+              0 => 'inch',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -114,6 +115,26 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'options' => 
             array (
+              0 => 
+              array (
+                'key' => 'AMOLED',
+                'value' => 'AMOLED',
+              ),
+              1 => 
+              array (
+                'key' => 'LED',
+                'value' => 'LED',
+              ),
+              2 => 
+              array (
+                'key' => 'LCD',
+                'value' => 'LCD',
+              ),
+              3 => 
+              array (
+                'key' => 'OLED',
+                'value' => 'OLED',
+              ),
             ),
              'width' => '',
              'defaultValue' => '',
@@ -145,6 +166,46 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'options' => 
             array (
+              0 => 
+              array (
+                'key' => 'Intel Core i3',
+                'value' => 'Intel Core i3',
+              ),
+              1 => 
+              array (
+                'key' => 'Intel Core i5',
+                'value' => 'Intel Core i5',
+              ),
+              2 => 
+              array (
+                'key' => 'Intel Core i7',
+                'value' => 'Intel Core i7',
+              ),
+              3 => 
+              array (
+                'key' => 'Intel Core i9',
+                'value' => 'Intel Core i9',
+              ),
+              4 => 
+              array (
+                'key' => 'AMD Ryzen 3',
+                'value' => 'AMD Ryzen 3',
+              ),
+              5 => 
+              array (
+                'key' => 'AMD Ryzen 5',
+                'value' => 'AMD Ryzen 5',
+              ),
+              6 => 
+              array (
+                'key' => 'AMD Ryzen 7',
+                'value' => 'AMD Ryzen 7',
+              ),
+              7 => 
+              array (
+                'key' => 'AMD Ryzen 9',
+                'value' => 'AMD Ryzen 9',
+              ),
             ),
              'width' => '',
              'defaultValue' => '',
@@ -208,9 +269,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'Ghz',
              'validUnits' => 
             array (
+              0 => 'Ghz',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -244,6 +306,26 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'options' => 
             array (
+              0 => 
+              array (
+                'key' => 'Windows 10',
+                'value' => 'Windows 10',
+              ),
+              1 => 
+              array (
+                'key' => 'Windows 11',
+                'value' => 'Windows 11',
+              ),
+              2 => 
+              array (
+                'key' => 'Mac OS',
+                'value' => 'Mac OS',
+              ),
+              3 => 
+              array (
+                'key' => 'Linux',
+                'value' => 'Linux',
+              ),
             ),
              'width' => '',
              'defaultValue' => '',
@@ -276,9 +358,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'GB',
              'validUnits' => 
             array (
+              0 => 'GB',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -313,9 +396,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'GB',
              'validUnits' => 
             array (
+              0 => 'GB',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -350,9 +434,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'GB',
              'validUnits' => 
             array (
+              0 => 'GB',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -387,9 +472,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'mp',
              'validUnits' => 
             array (
+              0 => 'mp',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -424,9 +510,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'px',
              'validUnits' => 
             array (
+              0 => 'px',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -460,6 +547,21 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'options' => 
             array (
+              0 => 
+              array (
+                'key' => 'AMD Radeon',
+                'value' => 'AMD Radeon',
+              ),
+              1 => 
+              array (
+                'key' => 'Nvidia GeForce',
+                'value' => 'Nvidia GeForce',
+              ),
+              2 => 
+              array (
+                'key' => 'Nvidia Quadro',
+                'value' => 'Nvidia Quadro',
+              ),
             ),
              'width' => '',
              'defaultValue' => '',
@@ -492,9 +594,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'mAh',
              'validUnits' => 
             array (
+              0 => 'mAh',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -528,6 +631,36 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'options' => 
             array (
+              0 => 
+              array (
+                'key' => 'Acer',
+                'value' => 'Acer',
+              ),
+              1 => 
+              array (
+                'key' => 'Dell',
+                'value' => 'Dell',
+              ),
+              2 => 
+              array (
+                'key' => 'Asus',
+                'value' => 'Asus',
+              ),
+              3 => 
+              array (
+                'key' => 'HP',
+                'value' => 'HP',
+              ),
+              4 => 
+              array (
+                'key' => 'Lenovo',
+                'value' => 'Lenovo',
+              ),
+              5 => 
+              array (
+                'key' => 'Apple',
+                'value' => 'Apple',
+              ),
             ),
              'width' => '',
              'defaultValue' => '',
