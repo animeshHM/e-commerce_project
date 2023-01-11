@@ -5,10 +5,15 @@
  * Variants: no
  *
  * Fields Summary:
- * - modelNumber [input]
+ * - productID [input]
+ * - productName [input]
+ * - productImage [image]
+ * - description [wysiwyg]
  * - price [quantityValue]
- * - weight [quantityValue]
  * - dimensions [fieldcollections]
+ * - color [rgbaColor]
+ * - quantity [numeric]
+ * - rating [slider]
  * - electronicItem [objectbricks]
  */
 
@@ -18,7 +23,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronics',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673247266,
+   'modificationDate' => 1673345797,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -68,8 +73,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'modelNumber',
-             'title' => 'Model Number',
+             'name' => 'productID',
+             'title' => 'Product ID',
              'tooltip' => '',
              'mandatory' => true,
              'noteditable' => false,
@@ -98,6 +103,87 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'productName',
+             'title' => 'Product Name',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'input',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
+          )),
+          2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+             'name' => 'productImage',
+             'title' => 'Product Image',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'image',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'height' => '',
+             'uploadPath' => '',
+          )),
+          3 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
+             'name' => 'description',
+             'title' => 'Description',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'wysiwyg',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'height' => '',
+             'toolbarConfig' => '',
+             'excludeFromSearchIndex' => false,
+             'maxCharacters' => '',
+          )),
+          4 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
              'name' => 'price',
              'title' => 'Price',
@@ -120,9 +206,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'rupees',
              'validUnits' => 
             array (
+              0 => 'rupees',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -134,43 +221,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
-          2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
-             'name' => 'weight',
-             'title' => 'Weight',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'quantityValue',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => '',
-             'unitWidth' => '',
-             'defaultValue' => NULL,
-             'defaultUnit' => NULL,
-             'validUnits' => 
-            array (
-            ),
-             'integer' => false,
-             'unsigned' => false,
-             'minValue' => NULL,
-             'maxValue' => NULL,
-             'unique' => false,
-             'decimalSize' => NULL,
-             'decimalPrecision' => NULL,
-             'autoConvert' => false,
-             'defaultValueGenerator' => '',
-          )),3 => 
+          5 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
              'name' => 'dimensions',
              'title' => 'Dimensions',
@@ -192,6 +243,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             ),
              'allowedTypes' => 
             array (
+              0 => 'dimensions',
             ),
              'lazyLoading' => true,
              'maxItems' => NULL,
@@ -201,7 +253,88 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'collapsible' => false,
              'border' => false,
           )),
-          4 => 
+          6 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\RgbaColor::__set_state(array(
+             'name' => 'color',
+             'title' => 'Color',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'rgbaColor',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+          )),
+          7 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+             'name' => 'quantity',
+             'title' => 'Quantity',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'numeric',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'defaultValue' => NULL,
+             'integer' => false,
+             'unsigned' => false,
+             'minValue' => NULL,
+             'maxValue' => NULL,
+             'unique' => false,
+             'decimalSize' => NULL,
+             'decimalPrecision' => NULL,
+             'defaultValueGenerator' => '',
+          )),
+          8 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
+             'name' => 'rating',
+             'title' => 'Rating',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'slider',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'height' => '',
+             'minValue' => 1.0,
+             'maxValue' => 5.0,
+             'vertical' => false,
+             'increment' => 1.0,
+             'decimalPrecision' => NULL,
+          )),
+          9 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
              'name' => 'electronicItem',
              'title' => 'Electronic Item',
@@ -223,8 +356,10 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             ),
              'allowedTypes' => 
             array (
-              0 => 'Mobile',
-              1 => 'Laptop',
+              0 => 'Refrigerator',
+              1 => 'Television',
+              2 => 'Mobile',
+              3 => 'Laptop',
             ),
              'maxItems' => NULL,
              'border' => false,
