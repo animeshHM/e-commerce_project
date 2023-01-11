@@ -17,7 +17,7 @@ class DefaultController extends FrontendController
         return $this->render('default/default.html.twig');
     }
 
-  /**
+    /**
      * @param Request $request
      * @return Response
      */
@@ -42,6 +42,51 @@ class DefaultController extends FrontendController
     public function homeAction(Request $request): Response
     {
         return $this->render('default/home.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function clothingAction(Request $request): Response
+    {
+        return $this->render('default/clothing.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function beautyAction(Request $request): Response
+    {
+        return $this->render('default/beauty.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function footwearAction(Request $request): Response
+    {
+        return $this->render('default/footwear.html.twig');
+    }
+
+    // /**
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // public function electronicsAction(Request $request): Response
+    // {
+    //     return $this->render('default/electronics.html.twig');
+    // }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function feedbackAction(Request $request): Response
+    {
+        return $this->render('default/feedback.html.twig');
     }
 }
 
