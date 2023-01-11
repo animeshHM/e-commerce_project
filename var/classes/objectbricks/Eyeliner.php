@@ -4,7 +4,7 @@
  * Fields Summary:
  * - Features [select]
  * - ColorShadeName [select]
- * - Formulation [select]
+ * - ApplyType [select]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -139,28 +139,28 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               ),
               3 => 
               array (
-                'key' => 'Green',
-                'value' => 'Green',
-              ),
-              4 => 
-              array (
                 'key' => 'Gold',
                 'value' => 'Gold',
               ),
-              5 => 
+              4 => 
               array (
                 'key' => 'Grey',
                 'value' => 'Grey',
               ),
-              6 => 
+              5 => 
               array (
                 'key' => 'Sliver',
                 'value' => 'Sliver',
               ),
-              7 => 
+              6 => 
               array (
                 'key' => 'White',
                 'value' => 'White',
+              ),
+              7 => 
+              array (
+                'key' => 'Mint green',
+                'value' => 'Mint green',
               ),
             ),
              'width' => '',
@@ -173,8 +173,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
           2 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'Formulation',
-             'title' => 'Formulation',
+             'name' => 'ApplyType',
+             'title' => 'ApplyType',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -205,8 +205,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               ),
               2 => 
               array (
-                'key' => 'Stick',
-                'value' => 'Stick',
+                'key' => 'Brush',
+                'value' => 'Brush',
               ),
               3 => 
               array (

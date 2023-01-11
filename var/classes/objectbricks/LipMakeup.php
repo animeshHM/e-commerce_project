@@ -2,8 +2,8 @@
 
 /**
  * Fields Summary:
- * - ColourFamily [multiselect]
- * - LipstikFinish [multiselect]
+ * - ColourFamily [select]
+ * - LipstickFinish [select]
  * - Formulation [select]
  */
 
@@ -45,7 +45,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'ColourFamily',
              'title' => 'Colour Family',
              'tooltip' => '',
@@ -56,7 +56,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -108,17 +108,17 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-             'name' => 'LipstikFinish',
-             'title' => 'Lipstik Finish',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'name' => 'LipstickFinish',
+             'title' => 'LipstickFinish',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -127,7 +127,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -169,12 +169,12 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
           2 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
@@ -205,12 +205,12 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               ),
               1 => 
               array (
-                'key' => 'Oily',
-                'value' => 'Gloss',
+                'key' => 'Moisturising',
+                'value' => 'Moisturising',
               ),
               2 => 
               array (
-                'key' => 'Scrub',
+                'key' => 'Liquid',
                 'value' => 'Liquid',
               ),
               3 => 

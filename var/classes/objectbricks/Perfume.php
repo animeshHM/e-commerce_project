@@ -2,9 +2,8 @@
 
 /**
  * Fields Summary:
- * - Formulation [multiselect]
- * - Fragrance [multiselect]
- * - PerfumesBrand [multiselect]
+ * - Formulation [select]
+ * - Fragrance [select]
  * - Strenght [select]
  */
 
@@ -46,7 +45,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'Formulation',
              'title' => 'Formulation',
              'tooltip' => '',
@@ -57,7 +56,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -71,43 +70,38 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               array (
                 'key' => 'Balm',
                 'value' => 'Balm',
-                'id' => 'extModel3671-1',
               ),
               1 => 
               array (
                 'key' => 'Mist',
                 'value' => 'Mist',
-                'id' => 'extModel3671-2',
               ),
               2 => 
               array (
                 'key' => 'Liquid',
                 'value' => 'Liquid',
-                'id' => 'extModel3671-3',
               ),
               3 => 
               array (
                 'key' => 'Roll on',
                 'value' => 'Roll on',
-                'id' => 'extModel3671-4',
               ),
               4 => 
               array (
                 'key' => 'Spray',
                 'value' => 'Spray',
-                'id' => 'extModel3671-5',
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'Fragrance',
              'title' => 'Fragrance',
              'tooltip' => '',
@@ -118,7 +112,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -132,91 +126,32 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               array (
                 'key' => 'Floral',
                 'value' => 'Floral',
-                'id' => 'extModel4063-1',
               ),
               1 => 
               array (
                 'key' => 'Fresh',
                 'value' => 'Fresh',
-                'id' => 'extModel4063-2',
               ),
               2 => 
               array (
                 'key' => 'Oceanic',
                 'value' => 'Oceanic',
-                'id' => 'extModel4063-3',
               ),
               3 => 
               array (
                 'key' => 'Woody',
                 'value' => 'Woody',
-                'id' => 'extModel4063-4',
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-             'name' => 'PerfumesBrand',
-             'title' => 'Perfumes Brand',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'multiselect',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'options' => 
-            array (
-              0 => 
-              array (
-                'key' => 'AXE',
-                'value' => 'AXE',
-                'id' => 'extModel4330-1',
-              ),
-              1 => 
-              array (
-                'key' => 'Denver',
-                'value' => 'Denver',
-                'id' => 'extModel4330-2',
-              ),
-              2 => 
-              array (
-                'key' => 'Engage',
-                'value' => 'Engage',
-                'id' => 'extModel4330-3',
-              ),
-              3 => 
-              array (
-                'key' => 'Park Avenue',
-                'value' => 'Park Avenue',
-                'id' => 'extModel4330-4',
-              ),
-            ),
-             'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
-             'optionsProviderClass' => '',
-             'optionsProviderData' => '',
-             'dynamicOptions' => false,
-          )),
-          3 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'Strenght',
              'title' => 'Strenght',

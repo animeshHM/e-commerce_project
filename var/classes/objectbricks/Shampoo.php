@@ -2,9 +2,9 @@
 
 /**
  * Fields Summary:
- * - HairType [multiselect]
- * - KeyIngredients [multiselect]
- * - Preference [multiselect]
+ * - HairType [select]
+ * - KeyIngredients [select]
+ * - Preference [select]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -45,7 +45,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'HairType',
              'title' => 'Hair Type',
              'tooltip' => '',
@@ -56,7 +56,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -70,31 +70,28 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               array (
                 'key' => 'CurlyHair',
                 'value' => 'CurlyHair',
-                'id' => 'extModel1361-1',
               ),
               1 => 
               array (
                 'key' => 'DamagedHair',
                 'value' => 'DamagedHair',
-                'id' => 'extModel1361-2',
               ),
               2 => 
               array (
                 'key' => 'Oily',
                 'value' => 'Oily',
-                'id' => 'extModel1361-3',
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'KeyIngredients',
              'title' => 'Key Ingredients',
              'tooltip' => '',
@@ -105,7 +102,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -119,37 +116,33 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               array (
                 'key' => 'Almond',
                 'value' => 'Almond',
-                'id' => 'extModel1849-1',
               ),
               1 => 
               array (
                 'key' => 'Amla',
                 'value' => 'Amla',
-                'id' => 'extModel1849-2',
               ),
               2 => 
               array (
                 'key' => 'Keratin',
                 'value' => 'Keratin',
-                'id' => 'extModel1849-3',
               ),
               3 => 
               array (
                 'key' => 'Neem',
                 'value' => 'Neem',
-                'id' => 'extModel1849-4',
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'Preference',
              'title' => 'Preference',
              'tooltip' => '',
@@ -160,7 +153,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -174,28 +167,25 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               array (
                 'key' => 'AlcoholFree',
                 'value' => 'AlcoholFree',
-                'id' => 'extModel2116-1',
               ),
               1 => 
               array (
                 'key' => 'Antioxidants',
                 'value' => 'Antioxidants',
-                'id' => 'extModel2116-2',
               ),
               2 => 
               array (
                 'key' => 'FragranceFree',
                 'value' => 'FragranceFree',
-                'id' => 'extModel2116-3',
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,

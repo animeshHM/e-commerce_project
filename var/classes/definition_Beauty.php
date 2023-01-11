@@ -6,19 +6,16 @@
  *
  * Fields Summary:
  * - productID [input]
+ * - description [textarea]
  * - Quantity [numeric]
  * - Price [quantityValue]
  * - ManufacturingDate [date]
  * - ExpiryDate [date]
- * - Features [select]
- * - Formulations [multiselect]
- * - Finish [select]
- * - Brands [multiselect]
- * - Pigmentation [select]
- * - ColourShadeName [multiselect]
+ * - Brands [select]
  * - Ratings [slider]
  * - MakeupProducts [objectbricks]
  * - ProductImage [image]
+ * - BeautyType [select]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -27,7 +24,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Beauty',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673415096,
+   'modificationDate' => 1673429596,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -122,6 +119,32 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+                 'name' => 'description',
+                 'title' => 'Description',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'textarea',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'height' => '',
+                 'maxLength' => NULL,
+                 'showCharCount' => false,
+                 'excludeFromSearchIndex' => false,
+              )),
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'Quantity',
                  'title' => 'Quantity',
@@ -152,7 +175,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
                  'name' => 'Price',
                  'title' => 'Price',
@@ -175,13 +198,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
                  'unitWidth' => '',
                  'defaultValue' => NULL,
-                 'defaultUnit' => NULL,
+                 'defaultUnit' => 'rupees',
                  'validUnits' => 
                 array (
+                  0 => 'rupees',
                 ),
                  'integer' => false,
                  'unsigned' => false,
-                 'minValue' => 100,
+                 'minValue' => NULL,
                  'maxValue' => NULL,
                  'unique' => false,
                  'decimalSize' => NULL,
@@ -189,7 +213,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'autoConvert' => false,
                  'defaultValueGenerator' => '',
               )),
-              3 => 
+              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'ManufacturingDate',
                  'title' => 'Manufacturing Date',
@@ -215,7 +239,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'useCurrentDate' => false,
                  'defaultValueGenerator' => '',
               )),
-              4 => 
+              5 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'ExpiryDate',
                  'title' => 'Expiry Date',
@@ -241,169 +265,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'useCurrentDate' => false,
                  'defaultValueGenerator' => '',
               )),
-              5 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-                 'name' => 'Features',
-                 'title' => 'Features',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'select',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'options' => 
-                array (
-                  0 => 
-                  array (
-                    'key' => 'Long lasting',
-                    'value' => 'Long lasting',
-                    'id' => 'extModel2378-1',
-                  ),
-                  1 => 
-                  array (
-                    'key' => 'Sweat proof',
-                    'value' => 'Sweat proof',
-                    'id' => 'extModel2378-2',
-                  ),
-                  2 => 
-                  array (
-                    'key' => 'Waterproof',
-                    'value' => 'Waterproof',
-                    'id' => 'extModel2378-3',
-                  ),
-                ),
-                 'width' => '',
-                 'defaultValue' => '',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'columnLength' => 190,
-                 'dynamicOptions' => false,
-                 'defaultValueGenerator' => '',
-              )),
               6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                 'name' => 'Formulations',
-                 'title' => 'Formulations',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'multiselect',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'options' => 
-                array (
-                  0 => 
-                  array (
-                    'key' => 'Bullet',
-                    'value' => 'Bullet',
-                  ),
-                  1 => 
-                  array (
-                    'key' => 'Crayon',
-                    'value' => 'Crayon',
-                  ),
-                  2 => 
-                  array (
-                    'key' => 'Liquid',
-                    'value' => 'Liquid',
-                  ),
-                  3 => 
-                  array (
-                    'key' => 'Palette',
-                    'value' => 'Palette',
-                  ),
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'maxItems' => NULL,
-                 'renderType' => 'list',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'dynamicOptions' => false,
-              )),
-              7 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-                 'name' => 'Finish',
-                 'title' => 'Finish',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'select',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'options' => 
-                array (
-                  0 => 
-                  array (
-                    'key' => 'Dewy',
-                    'value' => 'Dewy',
-                    'id' => 'extModel2772-1',
-                  ),
-                  1 => 
-                  array (
-                    'key' => 'Illuminating',
-                    'value' => 'Illuminating',
-                    'id' => 'extModel2772-2',
-                  ),
-                  2 => 
-                  array (
-                    'key' => 'Luminous',
-                    'value' => 'Luminous',
-                    'id' => 'extModel2772-3',
-                  ),
-                  3 => 
-                  array (
-                    'key' => 'Matte',
-                    'value' => 'Matte',
-                    'id' => 'extModel2772-4',
-                  ),
-                  4 => 
-                  array (
-                    'key' => 'Natural',
-                    'value' => 'Natural',
-                    'id' => 'extModel2772-5',
-                  ),
-                ),
-                 'width' => '',
-                 'defaultValue' => '',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'columnLength' => 190,
-                 'dynamicOptions' => false,
-                 'defaultValueGenerator' => '',
-              )),
-              8 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
                  'name' => 'Brands',
                  'title' => 'Brands',
                  'tooltip' => '',
@@ -414,7 +277,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'multiselect',
+                 'fieldtype' => 'select',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -431,74 +294,43 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                   ),
                   1 => 
                   array (
-                    'key' => 'Colorbar',
-                    'value' => 'Colorbar',
-                  ),
-                  2 => 
-                  array (
                     'key' => 'Sugar',
                     'value' => 'Sugar',
                   ),
-                  3 => 
+                  2 => 
                   array (
                     'key' => 'Mac',
                     'value' => 'Mac',
                   ),
-                  4 => 
-                  array (
-                    'key' => 'Revlon',
-                    'value' => 'Revlon',
-                  ),
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'maxItems' => NULL,
-                 'renderType' => 'list',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'dynamicOptions' => false,
-              )),
-              9 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-                 'name' => 'Pigmentation',
-                 'title' => 'Pigmentation',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'select',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'options' => 
-                array (
-                  0 => 
-                  array (
-                    'key' => 'Full coverage',
-                    'value' => 'Full coverage',
-                  ),
-                  1 => 
-                  array (
-                    'key' => 'Low coverage',
-                    'value' => 'Low coverage',
-                  ),
-                  2 => 
-                  array (
-                    'key' => 'Medium coverage',
-                    'value' => 'Medium coverage',
-                  ),
                   3 => 
                   array (
-                    'key' => 'Sheer',
-                    'value' => 'Sheer',
+                    'key' => 'Dove',
+                    'value' => 'Dove',
+                  ),
+                  4 => 
+                  array (
+                    'key' => 'Mamaearth',
+                    'value' => 'Mamaearth',
+                  ),
+                  5 => 
+                  array (
+                    'key' => 'TREsemme',
+                    'value' => 'TREsemme',
+                  ),
+                  6 => 
+                  array (
+                    'key' => 'THE MAN COMPANY',
+                    'value' => 'THE MAN COMPANY',
+                  ),
+                  7 => 
+                  array (
+                    'key' => 'AND',
+                    'value' => 'AND',
+                  ),
+                  8 => 
+                  array (
+                    'key' => 'Fogg',
+                    'value' => 'Fogg',
                   ),
                 ),
                  'width' => '',
@@ -509,62 +341,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
-              10 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                 'name' => 'ColourShadeName',
-                 'title' => 'Colour Shade Name',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'multiselect',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'options' => 
-                array (
-                  0 => 
-                  array (
-                    'key' => 'Beige',
-                    'value' => ' Beige',
-                    'id' => 'extModel1974-1',
-                  ),
-                  1 => 
-                  array (
-                    'key' => 'Natural',
-                    'value' => 'Natural',
-                    'id' => 'extModel1974-2',
-                  ),
-                  2 => 
-                  array (
-                    'key' => 'Neutral',
-                    'value' => 'Neutral',
-                    'id' => 'extModel1974-3',
-                  ),
-                  3 => 
-                  array (
-                    'key' => 'White Ivory',
-                    'value' => ' White Ivory',
-                    'id' => 'extModel1974-4',
-                  ),
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'maxItems' => NULL,
-                 'renderType' => 'list',
-                 'optionsProviderClass' => '',
-                 'optionsProviderData' => '',
-                 'dynamicOptions' => false,
-              )),
-              11 => 
+              7 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'Ratings',
                  'title' => 'Ratings',
@@ -592,7 +369,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'increment' => 1.0,
                  'decimalPrecision' => NULL,
               )),
-              12 => 
+              8 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
                  'name' => 'MakeupProducts',
                  'title' => 'Makeup Products',
@@ -622,7 +399,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'border' => false,
               )),
-              13 => 
+              9 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
                  'name' => 'ProductImage',
                  'title' => 'Product Image',
@@ -645,6 +422,57 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
                  'height' => '',
                  'uploadPath' => '',
+              )),
+              10 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'BeautyType',
+                 'title' => 'Beauty Type',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'select',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => 'Eyeliner',
+                    'value' => 'Eyeliner',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Lipstick',
+                    'value' => 'Lipstick',
+                  ),
+                  2 => 
+                  array (
+                    'key' => 'Shampoo',
+                    'value' => 'Shampoo',
+                  ),
+                  3 => 
+                  array (
+                    'key' => 'Perfume',
+                    'value' => 'Perfume',
+                  ),
+                ),
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
+                 'defaultValueGenerator' => '',
               )),
             ),
              'locked' => false,
