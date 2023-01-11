@@ -47,7 +47,7 @@ class DefaultController extends FrontendController
     public function electronicsAction(Request $request): Response
     {
         $items = new DataObject\Electronics\Listing();
-        $items->setOrderKey("RAND()", false);
+        $items->setOrderKey("productName");
         $items->setOrder('asc');
         return $this->render('electronics/default.html.twig', ['object'=>$items]);
     }
