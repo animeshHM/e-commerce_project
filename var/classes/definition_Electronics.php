@@ -10,9 +10,7 @@
  * - productImage [image]
  * - description [textarea]
  * - price [quantityValue]
- * - dimensions [fieldcollections]
  * - color [rgbaColor]
- * - quantity [numeric]
  * - electronicsType [select]
  * - electronicItem [objectbricks]
  * - rating [slider]
@@ -24,7 +22,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Electronics',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673373740,
+   'modificationDate' => 1673459901,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -223,38 +221,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           5 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
-             'name' => 'dimensions',
-             'title' => 'Dimensions',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'fieldcollections',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'allowedTypes' => 
-            array (
-              0 => 'dimensions',
-            ),
-             'lazyLoading' => true,
-             'maxItems' => NULL,
-             'disallowAddRemove' => false,
-             'disallowReorder' => false,
-             'collapsed' => false,
-             'collapsible' => false,
-             'border' => false,
-          )),
-          6 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\RgbaColor::__set_state(array(
              'name' => 'color',
              'title' => 'Color',
@@ -276,43 +242,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             ),
              'width' => '',
           )),
-          7 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
-             'name' => 'quantity',
-             'title' => 'Quantity',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'numeric',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'integer' => false,
-             'unsigned' => false,
-             'minValue' => NULL,
-             'maxValue' => NULL,
-             'unique' => false,
-             'decimalSize' => NULL,
-             'decimalPrecision' => NULL,
-             'defaultValueGenerator' => '',
-          )),
-          8 => 
+          6 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'electronicsType',
              'title' => 'Electronics Type',
              'tooltip' => '',
-             'mandatory' => false,
+             'mandatory' => true,
              'noteditable' => false,
              'index' => false,
              'locked' => false,
@@ -358,7 +293,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
-          9 => 
+          7 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
              'name' => 'electronicItem',
              'title' => 'Electronic Item',
@@ -388,7 +323,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'maxItems' => NULL,
              'border' => false,
           )),
-          10 => 
+          8 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
              'name' => 'rating',
              'title' => 'Rating',
@@ -475,6 +410,71 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
+       'name' => 'dimensions',
+       'title' => 'Dimensions',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'fieldcollections',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'allowedTypes' => 
+      array (
+        0 => 'dimensions',
+      ),
+       'lazyLoading' => true,
+       'maxItems' => NULL,
+       'disallowAddRemove' => false,
+       'disallowReorder' => false,
+       'collapsed' => false,
+       'collapsible' => false,
+       'border' => false,
+    )),
+    1 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+       'name' => 'quantity',
+       'title' => 'Quantity',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'numeric',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'width' => '',
+       'defaultValue' => NULL,
+       'queryColumnType' => 'double',
+       'columnType' => 'double',
+       'integer' => false,
+       'unsigned' => false,
+       'minValue' => NULL,
+       'maxValue' => NULL,
+       'unique' => false,
+       'decimalSize' => NULL,
+       'decimalPrecision' => NULL,
+       'defaultValueGenerator' => '',
+    )),
   ),
    'blockedVarsForExport' => 
   array (
