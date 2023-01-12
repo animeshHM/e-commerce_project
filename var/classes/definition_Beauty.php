@@ -13,9 +13,9 @@
  * - ExpiryDate [date]
  * - Brands [select]
  * - Ratings [slider]
- * - MakeupProducts [objectbricks]
- * - ProductImage [image]
  * - BeautyType [select]
+ * - ProductImage [image]
+ * - MakeupProducts [objectbricks]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -24,7 +24,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Beauty',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673429596,
+   'modificationDate' => 1673456327,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -138,8 +138,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'width' => '',
-                 'height' => '',
+                 'width' => 250,
+                 'height' => 70,
                  'maxLength' => NULL,
                  'showCharCount' => false,
                  'excludeFromSearchIndex' => false,
@@ -201,13 +201,13 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultUnit' => 'rupees',
                  'validUnits' => 
                 array (
-                  0 => 'rupees',
+                  0 => 'rs',
                 ),
                  'integer' => false,
                  'unsigned' => false,
                  'minValue' => NULL,
                  'maxValue' => NULL,
-                 'unique' => false,
+                 'unique' => NULL,
                  'decimalSize' => NULL,
                  'decimalPrecision' => NULL,
                  'autoConvert' => false,
@@ -370,60 +370,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
               )),
               8 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-                 'name' => 'MakeupProducts',
-                 'title' => 'Makeup Products',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'objectbricks',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'allowedTypes' => 
-                array (
-                  0 => 'Eyeliner',
-                  1 => 'LipMakeup',
-                  2 => 'Shampoo',
-                  3 => 'Perfume',
-                ),
-                 'maxItems' => NULL,
-                 'border' => false,
-              )),
-              9 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
-                 'name' => 'ProductImage',
-                 'title' => 'Product Image',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'image',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'width' => '',
-                 'height' => '',
-                 'uploadPath' => '',
-              )),
-              10 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'BeautyType',
                  'title' => 'Beauty Type',
@@ -473,6 +419,60 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'columnLength' => 190,
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
+              )),
+              9 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+                 'name' => 'ProductImage',
+                 'title' => 'Product Image',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'image',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'height' => '',
+                 'uploadPath' => '',
+              )),
+              10 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+                 'name' => 'MakeupProducts',
+                 'title' => 'Makeup Products',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'objectbricks',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'allowedTypes' => 
+                array (
+                  0 => 'Eyeliner',
+                  1 => 'LipMakeup',
+                  2 => 'Shampoo',
+                  3 => 'Perfume',
+                ),
+                 'maxItems' => NULL,
+                 'border' => false,
               )),
             ),
              'locked' => false,
