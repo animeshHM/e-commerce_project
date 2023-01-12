@@ -11,6 +11,7 @@
  * - description [textarea]
  * - price [quantityValue]
  * - color [rgbaColor]
+ * - gender [select]
  * - clothingType [select]
  * - clothingItem [objectbricks]
  * - rating [slider]
@@ -22,7 +23,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Clothing',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673503496,
+   'modificationDate' => 1673508168,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -244,6 +245,47 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
           )),
           6 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'name' => 'gender',
+             'title' => 'Gender',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'select',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'options' => 
+            array (
+              0 => 
+              array (
+                'key' => 'Male',
+                'value' => 'Male',
+              ),
+              1 => 
+              array (
+                'key' => 'Female',
+                'value' => 'Female',
+              ),
+            ),
+             'width' => '',
+             'defaultValue' => '',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'columnLength' => 190,
+             'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
+          )),
+          7 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'clothingType',
              'title' => 'Clothing Type',
              'tooltip' => '',
@@ -288,7 +330,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
-          7 => 
+          8 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
              'name' => 'clothingItem',
              'title' => 'Clothing Item',
@@ -317,7 +359,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'maxItems' => NULL,
              'border' => false,
           )),
-          8 => 
+          9 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
              'name' => 'rating',
              'title' => 'Rating',

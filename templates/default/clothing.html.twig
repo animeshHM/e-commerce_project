@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body style="background-color:#551606">
+    {{ pimcore_snippet("header") }}
+    <div class="container">
+        <div>
+        <a href="clothing" class="btn btn-primary btn-md active" role="button" aria-pressed="true">All</a>
+        <a href="topWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Top Wear</a>
+        <a href="bottomWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Bottom Wear</a>
+        <a href="ethnicWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Ethnic Wear</a>
+        <a href="menClothing" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Men</a>
+        <a href="womenClothing" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Women</a>
+        </div>
+        <div class="row row-cols-3 row-cols-md-3 g-4">
+            {% for object in object %}
+            <div class="col">
+                <div class="card h-100">
+                    {# <div class="container-md border"> #}
+                        <img src="{{ object.getProductImage }}" class="card-img-top" alt="..." height="530px" width="80px";>
+                    {# </div> #}
+                    <div class="card-body">
+                        <h5 class="card-title">ProductName : {{ object.getProductName }}</h5>
+                        <p class="card-text">ProductID : {{ object.getProductID }}</p>
+                        <p class="card-text">Description : {{ object.getDescription }}</p>
+                        <p class="card-text">Price : {{ object.getPrice }}</p>
+                        <p class="card-text">Color : {{ object.getColor }}</p>
+                        <p class="card-text">Rating : {{ object.getRating }}</p>
+                        {% if object.getClothingType=='TopWear' %}
+                            <p class="card-text">Item : {{ object.getClothingItem.getTopWear.getItem }}</p>
+                            <p class="card-text">Size : {{ object.getClothingItem.getTopWear.getSize }}</p>
+                            <p class="card-text">Fabric : {{ object.getClothingItem.getTopWear.getFabric }}</p>
+                            <p class="card-text">Fit : {{ object.getClothingItem.getTopWear.getFit }}</p>
+                            <p class="card-text">Pattern : {{ object.getClothingItem.getTopWear.getPattern }}</p>
+                            <p class="card-text">Occasion : {{ object.getClothingItem.getTopWear.getOccasion }}</p>
+                        {% elseif object.getClothingType=='BottomWear' %}
+                            <p class="card-text">Item : {{ object.getClothingItem.getBottomWear.getItem }}</p>
+                            <p class="card-text">Size : {{ object.getClothingItem.getBottomWear.getSize }}</p>
+                            <p class="card-text">Fabric : {{ object.getClothingItem.getBottomWear.getFabric }}</p>
+                            <p class="card-text">Fit : {{ object.getClothingItem.getBottomWear.getFit }}</p>
+                            <p class="card-text">Pattern : {{ object.getClothingItem.getBottomWear.getPattern }}</p>
+                            <p class="card-text">Occasion : {{ object.getClothingItem.getBottomWear.getOccasion }}</p>
+                        {% elseif object.getClothingType=='EthnicWear' %}
+                            <p class="card-text">Item : {{ object.getClothingItem.getEthnicWear.getItem }}</p>
+                            <p class="card-text">Size : {{ object.getClothingItem.getEthnicWear.getSize }}</p>
+                            <p class="card-text">Fabric : {{ object.getClothingItem.getEthnicWear.getFabric }}</p>
+                            <p class="card-text">Pattern : {{ object.getClothingItem.getEthnicWear.getPattern }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {{ pimcore_snippet("footer") }}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

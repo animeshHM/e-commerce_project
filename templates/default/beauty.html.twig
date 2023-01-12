@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Electronics</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	</head>
+
+	<body style="background-color:#551606">
+		<div class="container">
+        {{ pimcore_snippet("header") }}
+		<div class="row row-cols-3 row-cols-md-3 g-4">
+			{% for object in object %}
+				<div class="col">
+					<div class="card h-100">
+						<img src="{{ object.getProductImage }}" class="rounded card-img-top" alt="..." height="530px" width="80px";> 
+						<div class="card-body">
+							{# <h5 class="card-title">ProductName: {{ object.getProductName }}</h5> #}
+							<p class="card-text">Product ID :
+								{{ object.getProductID }}</p>
+							<p class="card-text">Product Image :
+								{{ object.getProductImage }}</p>
+							<p class="card-text">Description :
+								{{ object.getDescription }}</p>
+							<p class="card-text">Price :
+								{{ object.getPrice }}</p>
+							<p class="card-text">Manufacturing Date :
+								{{ object.getManufacturingDate}}</p>
+							<p class="card-text">Expiry Date :
+								{{ object.getExpiryDate }}</p>
+							<p class="card-text">Brands :
+								{{ object.getBrands }}</p>
+							<p class="card-text">Quantity :
+								{{ object.getQuantity }}</p>
+							<p class="card-text">Ratings :
+								{{ object.getRatings }}</p>
+
+                            <!--PRODUCT :: EYELINER  -->
+							 {% if object.getBeautyType=='Eyeliner' %} 
+								 <p class="card-text">Features :
+									{{ object.getMakeupProducts.getEyeliner.getFeatures }}</p> 
+								<p class="card-text">Color Shade Name :
+									{{ object.getMakeupProducts.getEyeliner.getColorShadeName }}</p>
+								<p class="card-text">Apply Type :
+									{{ object.getMakeupProducts.getEyeliner.getApplyType }}</p>
+
+                            <!--PRODUCT :: LIPSTICK -->
+							{% elseif object.getBeautyType=='Lipstick' %} 
+								<p class="card-text">Colour Family :
+									{{ object.getMakeupProducts.getLipMakeup.getColourFamily }}</p>
+								<p class="card-text">Finish :
+									{{ object.getMakeupProducts.getLipMakeup.getLipstickFinish }}</p>
+								<p class="card-text">Formulation :
+									{{ object.getMakeupProducts.getLipMakeup.getFormulation }}</p>
+
+                            <!--PRODUCT :: PERFUME -->
+							{% elseif object.getBeautyType=='Perfume' %}
+								<p class="card-text">Formulation :
+									{{ object.getMakeupProducts.getPerfume.getFormulation }}</p>
+								<p class="card-text">Fragrance :
+									{{ object.getMakeupProducts.getPerfume.getFragrance }}</p>
+								<p class="card-text">Strenght :
+									{{ object.getMakeupProducts.getPerfume.getStrenght}}</p>
+
+                             <!--PRODUCT :: SHAMPOO -->
+							{% elseif object.getBeautyType=='Shampoo' %}
+								<p class="card-text">Hair Type :
+									{{ object.getMakeupProducts.getShampoo.getHairType}}</p>
+								<p class="card-text">Key Ingredients :
+									{{ object.getMakeupProducts.getShampoo.getKeyIngredients}}</p>
+								<p class="card-text">Preference :
+									{{ object.getMakeupProducts.getShampoo.getPreference }}</p> 
+
+
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		 </div>
+		{{ pimcore_snippet("footer") }}
+        </div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+		</body>
+	</body>
+</html>
