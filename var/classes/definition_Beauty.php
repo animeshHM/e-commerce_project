@@ -6,22 +6,16 @@
  *
  * Fields Summary:
  * - productID [input]
+ * - description [textarea]
  * - Quantity [numeric]
  * - Price [quantityValue]
  * - ManufacturingDate [date]
  * - ExpiryDate [date]
+ * - Brands [select]
  * - Ratings [slider]
- * - Makeup [objectbricks]
- * - Brands [multiselect]
- * - Skincare [objectbricks]
- * - HaircareType [select]
- * - HairType [multiselect]
- * - KeyIngredients [multiselect]
- * - Preference [multiselect]
- * - Formulation [multiselect]
- * - Fragrance [multiselect]
- * - PerfumesBrand [multiselect]
+ * - MakeupProducts [objectbricks]
  * - ProductImage [image]
+ * - BeautyType [select]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -30,7 +24,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Beauty',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673345292,
+   'modificationDate' => 1673429596,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -125,6 +119,32 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+                 'name' => 'description',
+                 'title' => 'Description',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'textarea',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'height' => '',
+                 'maxLength' => NULL,
+                 'showCharCount' => false,
+                 'excludeFromSearchIndex' => false,
+              )),
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'Quantity',
                  'title' => 'Quantity',
@@ -155,7 +175,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
                  'defaultValueGenerator' => '',
               )),
-              2 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
                  'name' => 'Price',
                  'title' => 'Price',
@@ -178,13 +198,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
                  'unitWidth' => '',
                  'defaultValue' => NULL,
-                 'defaultUnit' => NULL,
+                 'defaultUnit' => 'rupees',
                  'validUnits' => 
                 array (
+                  0 => 'rupees',
                 ),
                  'integer' => false,
                  'unsigned' => false,
-                 'minValue' => 100,
+                 'minValue' => NULL,
                  'maxValue' => NULL,
                  'unique' => false,
                  'decimalSize' => NULL,
@@ -192,7 +213,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'autoConvert' => false,
                  'defaultValueGenerator' => '',
               )),
-              3 => 
+              4 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'ManufacturingDate',
                  'title' => 'Manufacturing Date',
@@ -218,7 +239,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'useCurrentDate' => false,
                  'defaultValueGenerator' => '',
               )),
-              4 => 
+              5 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
                  'name' => 'ExpiryDate',
                  'title' => 'Expiry Date',
@@ -244,7 +265,83 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'useCurrentDate' => false,
                  'defaultValueGenerator' => '',
               )),
-              5 => 
+              6 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'Brands',
+                 'title' => 'Brands',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'select',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => 'Lakme',
+                    'value' => 'Lakme',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Sugar',
+                    'value' => 'Sugar',
+                  ),
+                  2 => 
+                  array (
+                    'key' => 'Mac',
+                    'value' => 'Mac',
+                  ),
+                  3 => 
+                  array (
+                    'key' => 'Dove',
+                    'value' => 'Dove',
+                  ),
+                  4 => 
+                  array (
+                    'key' => 'Mamaearth',
+                    'value' => 'Mamaearth',
+                  ),
+                  5 => 
+                  array (
+                    'key' => 'TREsemme',
+                    'value' => 'TREsemme',
+                  ),
+                  6 => 
+                  array (
+                    'key' => 'THE MAN COMPANY',
+                    'value' => 'THE MAN COMPANY',
+                  ),
+                  7 => 
+                  array (
+                    'key' => 'AND',
+                    'value' => 'AND',
+                  ),
+                  8 => 
+                  array (
+                    'key' => 'Fogg',
+                    'value' => 'Fogg',
+                  ),
+                ),
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              7 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'Ratings',
                  'title' => 'Ratings',
@@ -272,572 +369,37 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'increment' => 1.0,
                  'decimalPrecision' => NULL,
               )),
-              6 => 
-              Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-                 'name' => 'Makeup',
-                 'type' => NULL,
-                 'region' => NULL,
-                 'title' => 'Makeup',
-                 'width' => '',
-                 'height' => '',
-                 'collapsible' => false,
-                 'collapsed' => false,
-                 'bodyStyle' => '',
-                 'datatype' => 'layout',
-                 'permissions' => NULL,
-                 'children' => 
-                array (
-                  0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-                     'name' => 'Makeup',
-                     'title' => 'Makeup',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'objectbricks',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'allowedTypes' => 
-                    array (
-                      0 => 'Makeup',
-                    ),
-                     'maxItems' => NULL,
-                     'border' => false,
-                  )),
-                  1 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                     'name' => 'Brands',
-                     'title' => 'Brands',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'multiselect',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'Lakme',
-                        'value' => 'Lakme',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'Colorbar',
-                        'value' => 'Colorbar',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'Sugar',
-                        'value' => 'Sugar',
-                      ),
-                      3 => 
-                      array (
-                        'key' => 'Mac',
-                        'value' => 'Mac',
-                      ),
-                      4 => 
-                      array (
-                        'key' => 'Revlon',
-                        'value' => 'Revlon',
-                      ),
-                    ),
-                     'width' => '',
-                     'height' => '',
-                     'maxItems' => NULL,
-                     'renderType' => 'list',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'dynamicOptions' => false,
-                  )),
-                ),
-                 'locked' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'fieldtype' => 'panel',
-                 'layout' => NULL,
-                 'border' => false,
-                 'icon' => '',
-                 'labelWidth' => 0,
-                 'labelAlign' => 'left',
-              )),
-              7 => 
-              Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-                 'name' => 'Skincares',
-                 'type' => NULL,
-                 'region' => NULL,
-                 'title' => 'Skincares',
-                 'width' => '',
-                 'height' => '',
-                 'collapsible' => false,
-                 'collapsed' => false,
-                 'bodyStyle' => '',
-                 'datatype' => 'layout',
-                 'permissions' => NULL,
-                 'children' => 
-                array (
-                  0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-                     'name' => 'Skincare',
-                     'title' => 'Skincare',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'objectbricks',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'allowedTypes' => 
-                    array (
-                      0 => 'Skincare',
-                    ),
-                     'maxItems' => NULL,
-                     'border' => false,
-                  )),
-                ),
-                 'locked' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'fieldtype' => 'panel',
-                 'layout' => NULL,
-                 'border' => false,
-                 'icon' => '',
-                 'labelWidth' => 0,
-                 'labelAlign' => 'left',
-              )),
               8 => 
-              Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-                 'name' => 'Haircare',
-                 'type' => NULL,
-                 'region' => NULL,
-                 'title' => 'Haircare',
-                 'width' => '',
-                 'height' => '',
-                 'collapsible' => false,
-                 'collapsed' => false,
-                 'bodyStyle' => '',
-                 'datatype' => 'layout',
-                 'permissions' => NULL,
-                 'children' => 
-                array (
-                  0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-                     'name' => 'HaircareType',
-                     'title' => 'Type',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'select',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'Oil',
-                        'value' => 'Oil',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'Shampoo',
-                        'value' => 'Shampoo',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'Conditioner',
-                        'value' => 'Conditioner',
-                      ),
-                    ),
-                     'width' => '',
-                     'defaultValue' => '',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'columnLength' => 190,
-                     'dynamicOptions' => false,
-                     'defaultValueGenerator' => '',
-                  )),
-                  1 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                     'name' => 'HairType',
-                     'title' => 'Hair Type',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'multiselect',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'CurlyHair',
-                        'value' => 'CurlyHair',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'DamagedHair',
-                        'value' => 'DamagedHair',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'Oily',
-                        'value' => 'Oily',
-                      ),
-                    ),
-                     'width' => '',
-                     'height' => '',
-                     'maxItems' => NULL,
-                     'renderType' => 'list',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'dynamicOptions' => false,
-                  )),
-                  2 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                     'name' => 'KeyIngredients',
-                     'title' => 'Key Ingredients',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'multiselect',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'Almond',
-                        'value' => 'Almond',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'Amla',
-                        'value' => 'Amla',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'Keratin',
-                        'value' => 'Keratin',
-                      ),
-                      3 => 
-                      array (
-                        'key' => 'Neem',
-                        'value' => 'Neem',
-                      ),
-                    ),
-                     'width' => '',
-                     'height' => '',
-                     'maxItems' => NULL,
-                     'renderType' => 'list',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'dynamicOptions' => false,
-                  )),
-                  3 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                     'name' => 'Preference',
-                     'title' => 'Preference',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'multiselect',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'AlcoholFree',
-                        'value' => 'AlcoholFree',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'Antioxidants',
-                        'value' => 'Antioxidants',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'FragranceFree',
-                        'value' => 'FragranceFree',
-                      ),
-                    ),
-                     'width' => '',
-                     'height' => '',
-                     'maxItems' => NULL,
-                     'renderType' => 'list',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'dynamicOptions' => false,
-                  )),
-                ),
+              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
+                 'name' => 'MakeupProducts',
+                 'title' => 'Makeup Products',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
                  'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'objectbricks',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'fieldtype' => 'panel',
-                 'layout' => NULL,
+                 'allowedTypes' => 
+                array (
+                  0 => 'Eyeliner',
+                  1 => 'LipMakeup',
+                  2 => 'Shampoo',
+                  3 => 'Perfume',
+                ),
+                 'maxItems' => NULL,
                  'border' => false,
-                 'icon' => '',
-                 'labelWidth' => 0,
-                 'labelAlign' => 'left',
               )),
               9 => 
-              Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-                 'name' => 'Perfume',
-                 'type' => NULL,
-                 'region' => NULL,
-                 'title' => 'Perfume',
-                 'width' => '',
-                 'height' => '',
-                 'collapsible' => false,
-                 'collapsed' => false,
-                 'bodyStyle' => '',
-                 'datatype' => 'layout',
-                 'permissions' => NULL,
-                 'children' => 
-                array (
-                  0 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                     'name' => 'Formulation',
-                     'title' => 'Formulation',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'multiselect',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'Balm',
-                        'value' => 'Balm',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'Mist',
-                        'value' => 'Mist',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'Liquid',
-                        'value' => 'Liquid',
-                      ),
-                      3 => 
-                      array (
-                        'key' => 'Roll on',
-                        'value' => 'Roll on',
-                      ),
-                      4 => 
-                      array (
-                        'key' => 'Spray',
-                        'value' => 'Spray',
-                      ),
-                    ),
-                     'width' => '',
-                     'height' => '',
-                     'maxItems' => NULL,
-                     'renderType' => 'list',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'dynamicOptions' => false,
-                  )),
-                  1 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                     'name' => 'Fragrance',
-                     'title' => 'Fragrance',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'multiselect',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'Floral',
-                        'value' => 'Floral',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'Fresh',
-                        'value' => 'Fresh',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'Oceanic',
-                        'value' => 'Oceanic',
-                      ),
-                      3 => 
-                      array (
-                        'key' => 'Woody',
-                        'value' => 'Woody',
-                      ),
-                    ),
-                     'width' => '',
-                     'height' => '',
-                     'maxItems' => NULL,
-                     'renderType' => 'list',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'dynamicOptions' => false,
-                  )),
-                  2 => 
-                  Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-                     'name' => 'PerfumesBrand',
-                     'title' => 'Perfumes Brand',
-                     'tooltip' => '',
-                     'mandatory' => false,
-                     'noteditable' => false,
-                     'index' => false,
-                     'locked' => false,
-                     'style' => '',
-                     'permissions' => NULL,
-                     'datatype' => 'data',
-                     'fieldtype' => 'multiselect',
-                     'relationType' => false,
-                     'invisible' => false,
-                     'visibleGridView' => false,
-                     'visibleSearch' => false,
-                     'blockedVarsForExport' => 
-                    array (
-                    ),
-                     'options' => 
-                    array (
-                      0 => 
-                      array (
-                        'key' => 'AXE',
-                        'value' => 'AXE',
-                      ),
-                      1 => 
-                      array (
-                        'key' => 'Denver',
-                        'value' => 'Denver',
-                      ),
-                      2 => 
-                      array (
-                        'key' => 'Engage',
-                        'value' => 'Engage',
-                      ),
-                      3 => 
-                      array (
-                        'key' => 'Park Avenue',
-                        'value' => 'Park Avenue',
-                      ),
-                    ),
-                     'width' => '',
-                     'height' => '',
-                     'maxItems' => NULL,
-                     'renderType' => 'list',
-                     'optionsProviderClass' => '',
-                     'optionsProviderData' => '',
-                     'dynamicOptions' => false,
-                  )),
-                ),
-                 'locked' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'fieldtype' => 'panel',
-                 'layout' => NULL,
-                 'border' => false,
-                 'icon' => '',
-                 'labelWidth' => 0,
-                 'labelAlign' => 'left',
-              )),
-              10 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
                  'name' => 'ProductImage',
                  'title' => 'Product Image',
@@ -860,6 +422,57 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
                  'height' => '',
                  'uploadPath' => '',
+              )),
+              10 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'BeautyType',
+                 'title' => 'Beauty Type',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'select',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => 'Eyeliner',
+                    'value' => 'Eyeliner',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Lipstick',
+                    'value' => 'Lipstick',
+                  ),
+                  2 => 
+                  array (
+                    'key' => 'Shampoo',
+                    'value' => 'Shampoo',
+                  ),
+                  3 => 
+                  array (
+                    'key' => 'Perfume',
+                    'value' => 'Perfume',
+                  ),
+                ),
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
+                 'defaultValueGenerator' => '',
               )),
             ),
              'locked' => false,
