@@ -6,6 +6,7 @@
  * - size [select]
  * - fabric [select]
  * - pattern [select]
+ * - brand [select]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -269,6 +270,62 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               array (
                 'key' => 'Churidaar',
                 'value' => 'Churidaar',
+              ),
+            ),
+             'width' => '',
+             'defaultValue' => '',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'columnLength' => 190,
+             'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
+          )),
+          4 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'name' => 'brand',
+             'title' => 'Brand',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'select',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'options' => 
+            array (
+              0 => 
+              array (
+                'key' => 'BIba',
+                'value' => 'BIba',
+              ),
+              1 => 
+              array (
+                'key' => 'Libas',
+                'value' => 'Libas',
+              ),
+              2 => 
+              array (
+                'key' => 'Anouk',
+                'value' => 'Anouk',
+              ),
+              3 => 
+              array (
+                'key' => 'Aakriti',
+                'value' => 'Aakriti',
+              ),
+              4 => 
+              array (
+                'key' => 'Global Desi',
+                'value' => 'Global Desi',
               ),
             ),
              'width' => '',
