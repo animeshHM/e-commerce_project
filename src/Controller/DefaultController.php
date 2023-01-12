@@ -30,4 +30,61 @@ class DefaultController extends FrontendController
         $item->setOrder('asc');
         return $this->render('default/beauty.html.twig', ['object'=>$item]);
     }
+
+
+   /**
+     * @param Request $request
+     * @return Response
+     */
+     public function headerAction(Request $request): Response
+    {
+        return $this->render('default/header.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function footerAction(Request $request): Response
+    {
+        return $this->render('default/footer.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function homeAction(Request $request): Response
+    {
+        return $this->render('default/home.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function clothingAction(Request $request): Response
+    {
+        return $this->render('default/clothing.html.twig');
+    }
+
+
+     /**
+     * @param Request $request
+     * @return Response
+     */
+    public function footwearAction(Request $request): Response
+    {
+        return $this->render('default/footwear.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function feedbackAction(Request $request): Response
+    {
+        return $this->render('default/feedback.html.twig');
+    }
 }
+

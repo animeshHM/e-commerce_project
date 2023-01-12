@@ -41,9 +41,26 @@ $path = 'public/csv/beauty.csv';
 
         $beautyproduct=$csv[1][0];
         $beautydescription=$csv[1][1];
+        $beautyquantity=$csv[1][2];
+        //$beautyprice=$csv[1][3];
+        // $beautymanufacturingdate=$csv[1][4];
+        // $beautyexpirydate=$csv[1][5];
+        $beautybrands=$csv[1][6];
+        $beautyrating=$csv[1][7];
+        //$beautymakeupproducts=$csv[1][8];
+        $beautybeautytype=$csv[1][9];
 
         $object->setproductID($beautyproduct);
         $object->setdescription($beautydescription);
+        $object->setQuantity($beautyquantity);
+        //$object->setprice($beautyprice);
+        // $object->setManufacturingDate($beautymanufacturingdate);
+        // $object->setExpiryDate($beautyexpirydate);
+        $object->setBrands($beautybrands);
+        $object->setRatings($beautyrating);
+        //$object->setMakeupProducts($makeupproducts);
+        $object->setBeautyType($beautybeautytype);
+        
         $object->save();
         return 0;
  }

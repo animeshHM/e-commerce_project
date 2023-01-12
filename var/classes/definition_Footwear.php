@@ -5,16 +5,16 @@
  * Variants: no
  *
  * Fields Summary:
- * - FootwearType [input]
  * - Brand [select]
  * - Price [quantityValue]
  * - Rating [slider]
  * - Quantity [numeric]
+ * - Gender [select]
  * - Color [rgbaColor]
  * - productImage [image]
  * - description [wysiwyg]
- * - MenFootwear [objectbricks]
- * - WomenFootwear [objectbricks]
+ * - FootwearType [select]
+ * - FootwearProduct [objectbricks]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -23,7 +23,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Footwear',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673508978,
+   'modificationDate' => 1673523551,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -87,37 +87,6 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'FootwearType',
-                 'title' => 'Footwear Type',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'input',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
-                array (
-                ),
-                 'width' => '',
-                 'defaultValue' => NULL,
-                 'columnLength' => 190,
-                 'regex' => '',
-                 'regexFlags' => 
-                array (
-                ),
-                 'unique' => false,
-                 'showCharCount' => false,
-                 'defaultValueGenerator' => '',
-              )),
-              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
                  'name' => 'Brand',
                  'title' => 'Brand',
@@ -178,7 +147,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
-              2 => 
+              1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
                  'name' => 'Price',
                  'title' => 'Price',
@@ -216,7 +185,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'autoConvert' => false,
                  'defaultValueGenerator' => '',
               )),
-              3 => 
+              2 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
                  'name' => 'Rating',
                  'title' => 'Rating',
@@ -244,7 +213,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'increment' => 1.0,
                  'decimalPrecision' => NULL,
               )),
-              4 => 
+              3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
                  'name' => 'Quantity',
                  'title' => 'Quantity',
@@ -273,6 +242,47 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'unique' => false,
                  'decimalSize' => NULL,
                  'decimalPrecision' => NULL,
+                 'defaultValueGenerator' => '',
+              )),
+              4 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'Gender',
+                 'title' => 'Footwear Type',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'select',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => 'Men',
+                    'value' => 'Male',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Women',
+                    'value' => 'Women',
+                  ),
+                ),
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
               )),
               5 => 
@@ -348,9 +358,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxCharacters' => '',
               )),
               8 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-                 'name' => 'MenFootwear',
-                 'title' => 'Men Footwear',
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'FootwearType',
+                 'title' => 'Footwear Type',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -359,7 +369,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'objectbricks',
+                 'fieldtype' => 'select',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -367,19 +377,46 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'allowedTypes' => 
+                 'options' => 
                 array (
-                  0 => 'FormalShoes',
-                  1 => 'Sandals',
-                  2 => 'SportsShoes',
+                  0 => 
+                  array (
+                    'key' => 'Boots',
+                    'value' => 'Boots',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Shoes',
+                    'value' => 'Shoes',
+                  ),
+                  2 => 
+                  array (
+                    'key' => 'FormalShoes',
+                    'value' => 'FormalShoes',
+                  ),
+                  3 => 
+                  array (
+                    'key' => 'Heels',
+                    'value' => 'Heals',
+                  ),
+                  4 => 
+                  array (
+                    'key' => 'Sandals',
+                    'value' => 'Sandals',
+                  ),
                 ),
-                 'maxItems' => NULL,
-                 'border' => false,
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
+                 'defaultValueGenerator' => '',
               )),
               9 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
-                 'name' => 'WomenFootwear',
-                 'title' => 'Women Footwear',
+                 'name' => 'FootwearProduct',
+                 'title' => 'FootwearProduct',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -400,7 +437,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                   0 => 'Boots',
                   1 => 'Heels',
-                  2 => 'Shoes',
+                  2 => 'FormalShoes',
+                  3 => 'Sandals',
+                  4 => 'SportsShoes',
                 ),
                  'maxItems' => NULL,
                  'border' => false,
