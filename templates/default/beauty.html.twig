@@ -13,7 +13,7 @@
      {% for object in object %}
         <div class="col">
             <div class="card h-100">
-                <img src="{{ object.getProductImage }}" class="card-img-top" alt="..." height="500px" width="80px";>
+                <img src="{{ object.getProductImage }}" class="card-img-top" alt="..." height="530px" width="80px";>
                 <div class="card-body">
                     {# <h5 class="card-title">ProductName: {{ object.getProductName }}</h5> #}
                     <p class="card-text">Product ID : {{ object.getProductID }}</p>
@@ -45,17 +45,6 @@
                         <p class="card-text">Key Ingredients : {{ object.getMakeupProducts.getShampoo.getKeyIngredients}}</p>
                         <p class="card-text">Preference : {{ object.getMakeupProducts.getShampoo.getPreference }}</p>
 
-                     {% elseif object.getBeautyType=='Lipstick' %}
-                        <p class="card-text">Colour Family : {{ object.getMakeupProducts.getLipMakeup.getColourFamily }}</p>
-                        <p class="card-text">Finish : {{ object.getMakeupProducts.getLipMakeup.getLipstickFinish }}</p>
-                        <p class="card-text">Formulation : {{ object.getMakeupProducts.getLipMakeup.getFormulation }}</p>
-
-                    {% elseif object.getBeautyType=='Perfume' %}
-                        <p class="card-text">Formulation : {{ object.getMakeupProducts.getPerfume.getFormulation }}</p>
-                        <p class="card-text">Fragrance : {{ object.getMakeupProducts.getPerfume.getFragrance }}</p>
-                        <p class="card-text">Strenght : {{ object.getMakeupProducts.getPerfume.getStrenght}}</p>
-                      
-                  
                         
                     {% endif %}
                 </div>
