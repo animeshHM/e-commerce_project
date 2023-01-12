@@ -2,18 +2,20 @@
 
 /**
  * Fields Summary:
- * - ColourFamily [select]
- * - LipstickFinish [select]
- * - Formulation [select]
+ * - item [select]
+ * - size [select]
+ * - fabric [select]
+ * - pattern [select]
+ * - brand [select]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'dao' => NULL,
-   'key' => 'LipMakeup',
+   'key' => 'EthnicWear',
    'parentClass' => '',
    'implementsInterfaces' => '',
    'title' => '',
-   'group' => 'Beauty',
+   'group' => 'Clothing',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => NULL,
@@ -46,8 +48,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'ColourFamily',
-             'title' => 'Colour Family',
+             'name' => 'item',
+             'title' => 'Item',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -68,43 +70,18 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'Brown',
-                'value' => 'Brown',
+                'key' => 'Saree',
+                'value' => 'Saree',
               ),
               1 => 
               array (
-                'key' => 'Maroon',
-                'value' => 'Maroon',
+                'key' => 'Kurta Pyjama Set',
+                'value' => 'Kurta Pyjama Set',
               ),
               2 => 
               array (
-                'key' => 'Nude',
-                'value' => 'Nude',
-              ),
-              3 => 
-              array (
-                'key' => 'Nude pink',
-                'value' => 'Nude pink',
-              ),
-              4 => 
-              array (
-                'key' => 'Orange',
-                'value' => 'Orange',
-              ),
-              5 => 
-              array (
-                'key' => 'Purple',
-                'value' => 'Purple',
-              ),
-              6 => 
-              array (
-                'key' => 'Red',
-                'value' => 'Red',
-              ),
-              7 => 
-              array (
-                'key' => 'Pink',
-                'value' => 'Pink',
+                'key' => 'Salwar Kameez Suit',
+                'value' => 'Salwar Kameez Suit',
               ),
             ),
              'width' => '',
@@ -117,8 +94,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
           1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'LipstickFinish',
-             'title' => 'LipstickFinish',
+             'name' => 'size',
+             'title' => 'Size',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -139,33 +116,33 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'Creme',
-                'value' => 'Creme',
+                'key' => 'XS',
+                'value' => 'XS',
               ),
               1 => 
               array (
-                'key' => 'Glossy',
-                'value' => 'Glossy',
+                'key' => 'S',
+                'value' => 'S',
               ),
               2 => 
               array (
-                'key' => 'Matte',
-                'value' => 'Matte',
+                'key' => 'M',
+                'value' => 'M',
               ),
               3 => 
               array (
-                'key' => 'Natural',
-                'value' => 'Natural',
+                'key' => 'L',
+                'value' => 'L',
               ),
               4 => 
               array (
-                'key' => 'Metallic',
-                'value' => 'Metallic',
+                'key' => 'XL',
+                'value' => 'XL',
               ),
               5 => 
               array (
-                'key' => 'Shimmer',
-                'value' => 'Shimmer',
+                'key' => 'XXL',
+                'value' => 'XXL',
               ),
             ),
              'width' => '',
@@ -178,8 +155,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
           2 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'Formulation',
-             'title' => 'Formulation',
+             'name' => 'fabric',
+             'title' => 'Fabric',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -200,28 +177,155 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'Balm',
-                'value' => 'Balm',
+                'key' => 'Cotton',
+                'value' => 'Cotton',
               ),
               1 => 
               array (
-                'key' => 'Moisturising',
-                'value' => 'Moisturising',
+                'key' => 'Silk',
+                'value' => 'Silk',
               ),
               2 => 
               array (
-                'key' => 'Liquid',
-                'value' => 'Liquid',
+                'key' => 'Blended',
+                'value' => 'Blended',
               ),
               3 => 
               array (
-                'key' => 'Gel',
-                'value' => 'Gel',
+                'key' => 'Chiffon',
+                'value' => 'Chiffon',
               ),
               4 => 
               array (
-                'key' => '',
-                'value' => '',
+                'key' => 'Georgette',
+                'value' => 'Georgette',
+              ),
+            ),
+             'width' => '',
+             'defaultValue' => '',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'columnLength' => 190,
+             'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
+          )),
+          3 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'name' => 'pattern',
+             'title' => 'Pattern',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'select',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'options' => 
+            array (
+              0 => 
+              array (
+                'key' => 'Chikankari',
+                'value' => 'Chikankari',
+              ),
+              1 => 
+              array (
+                'key' => 'Sanganeri',
+                'value' => 'Sanganeri',
+              ),
+              2 => 
+              array (
+                'key' => 'Kathyawadi',
+                'value' => 'Kathyawadi',
+              ),
+              3 => 
+              array (
+                'key' => 'Bandhani',
+                'value' => 'Bandhani',
+              ),
+              4 => 
+              array (
+                'key' => 'Paithani',
+                'value' => 'Paithani',
+              ),
+              5 => 
+              array (
+                'key' => 'Anarkali',
+                'value' => 'Anarkali',
+              ),
+              6 => 
+              array (
+                'key' => 'Pashmina',
+                'value' => 'Pashmina',
+              ),
+              7 => 
+              array (
+                'key' => 'Churidaar',
+                'value' => 'Churidaar',
+              ),
+            ),
+             'width' => '',
+             'defaultValue' => '',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'columnLength' => 190,
+             'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
+          )),
+          4 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'name' => 'brand',
+             'title' => 'Brand',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'select',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'options' => 
+            array (
+              0 => 
+              array (
+                'key' => 'BIba',
+                'value' => 'BIba',
+              ),
+              1 => 
+              array (
+                'key' => 'Libas',
+                'value' => 'Libas',
+              ),
+              2 => 
+              array (
+                'key' => 'Anouk',
+                'value' => 'Anouk',
+              ),
+              3 => 
+              array (
+                'key' => 'Aakriti',
+                'value' => 'Aakriti',
+              ),
+              4 => 
+              array (
+                'key' => 'Global Desi',
+                'value' => 'Global Desi',
               ),
             ),
              'width' => '',
@@ -264,8 +368,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
   array (
     0 => 
     array (
-      'classname' => 'Beauty',
-      'fieldname' => 'MakeupProducts',
+      'classname' => 'Clothing',
+      'fieldname' => 'clothingItem',
     ),
   ),
 ));

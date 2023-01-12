@@ -2,20 +2,22 @@
 
 /**
  * Fields Summary:
- * - RunningType [select]
- * - SoleMaterial [select]
- * - Fastening [select]
- * - Cushioning [select]
- * - Size [select]
+ * - item [select]
+ * - size [slider]
+ * - fabric [select]
+ * - fit [select]
+ * - pattern [select]
+ * - occasion [select]
+ * - brand [select]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'dao' => NULL,
-   'key' => 'Shoes',
+   'key' => 'BottomWear',
    'parentClass' => '',
    'implementsInterfaces' => '',
    'title' => '',
-   'group' => 'WomenFootwear',
+   'group' => 'Clothing',
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => NULL,
@@ -48,8 +50,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
         array (
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'RunningType',
-             'title' => 'Running Type',
+             'name' => 'item',
+             'title' => 'Item',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -70,18 +72,18 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'LongDistance',
-                'value' => 'LongDistance',
+                'key' => 'Jeans',
+                'value' => 'Jeans',
               ),
               1 => 
               array (
-                'key' => 'RoadRunning',
-                'value' => 'RoadRunning',
+                'key' => 'Pant',
+                'value' => 'Pant',
               ),
               2 => 
               array (
-                'key' => 'Trekking',
-                'value' => 'Trekking',
+                'key' => 'Skirt',
+                'value' => 'Skirt',
               ),
             ),
              'width' => '',
@@ -93,9 +95,9 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'SoleMaterial',
-             'title' => 'Sole Material',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Slider::__set_state(array(
+             'name' => 'size',
+             'title' => 'Size',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -104,7 +106,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'select',
+             'fieldtype' => 'slider',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -112,41 +114,18 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'options' => 
-            array (
-              0 => 
-              array (
-                'key' => 'Rubber',
-                'value' => 'Rubber',
-              ),
-              1 => 
-              array (
-                'key' => 'EVA',
-                'value' => 'EVA',
-              ),
-              2 => 
-              array (
-                'key' => 'PU',
-                'value' => 'PU',
-              ),
-              3 => 
-              array (
-                'key' => 'PVC',
-                'value' => 'PVC',
-              ),
-            ),
              'width' => '',
-             'defaultValue' => '',
-             'optionsProviderClass' => '',
-             'optionsProviderData' => '',
-             'columnLength' => 190,
-             'dynamicOptions' => false,
-             'defaultValueGenerator' => '',
+             'height' => '',
+             'minValue' => 28.0,
+             'maxValue' => 40.0,
+             'vertical' => false,
+             'increment' => 2.0,
+             'decimalPrecision' => NULL,
           )),
           2 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'Fastening',
-             'title' => 'Fastening',
+             'name' => 'fabric',
+             'title' => 'Fabric',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -167,18 +146,33 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'LaceUps',
-                'value' => 'LaceUps',
+                'key' => 'Cotton',
+                'value' => 'Cotton',
               ),
               1 => 
               array (
-                'key' => 'SlipOn',
-                'value' => 'SlipOn',
+                'key' => 'Wool',
+                'value' => 'Wool',
               ),
               2 => 
               array (
-                'key' => 'Velcro',
-                'value' => 'Velcro',
+                'key' => 'Blend',
+                'value' => 'Blend',
+              ),
+              3 => 
+              array (
+                'key' => 'Linen',
+                'value' => 'Linen',
+              ),
+              4 => 
+              array (
+                'key' => 'Corduroy',
+                'value' => 'Corduroy',
+              ),
+              5 => 
+              array (
+                'key' => 'Denim',
+                'value' => 'Denim',
               ),
             ),
              'width' => '',
@@ -191,8 +185,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
           3 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'Cushioning',
-             'title' => 'Cushioning',
+             'name' => 'fit',
+             'title' => 'Fit',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -213,18 +207,23 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'High',
-                'value' => 'High',
+                'key' => 'Skinny Fit',
+                'value' => 'Skinny Fit',
               ),
               1 => 
               array (
-                'key' => 'Low',
-                'value' => 'Low',
+                'key' => 'Slim Fit',
+                'value' => 'Slim Fit',
               ),
               2 => 
               array (
-                'key' => 'Medium',
-                'value' => 'Medium',
+                'key' => 'Regular Fit',
+                'value' => 'Regular Fit',
+              ),
+              3 => 
+              array (
+                'key' => 'Relaxed Fit',
+                'value' => 'Relaxed Fit',
               ),
             ),
              'width' => '',
@@ -237,8 +236,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
           4 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
-             'name' => 'Size',
-             'title' => 'Size',
+             'name' => 'pattern',
+             'title' => 'Pattern',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -259,48 +258,140 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
               0 => 
               array (
-                'key' => 'UK1',
-                'value' => 'UK1',
+                'key' => 'Bell Bottom',
+                'value' => 'Bell Bottom',
               ),
               1 => 
               array (
-                'key' => 'UK2',
-                'value' => 'UK2',
+                'key' => 'Straight',
+                'value' => 'Straight',
               ),
               2 => 
               array (
-                'key' => 'UK3',
-                'value' => 'UK3',
+                'key' => 'Tapered',
+                'value' => 'Tapered',
               ),
               3 => 
               array (
-                'key' => 'UK4',
-                'value' => 'UK4',
+                'key' => 'Pleated',
+                'value' => 'Pleated',
               ),
               4 => 
               array (
-                'key' => 'UK5',
-                'value' => 'UK5',
+                'key' => 'Mini',
+                'value' => 'Mini',
               ),
               5 => 
               array (
-                'key' => 'UK6',
-                'value' => 'UK6',
+                'key' => 'A-line',
+                'value' => 'A-line',
               ),
-              6 => 
+            ),
+             'width' => '',
+             'defaultValue' => '',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'columnLength' => 190,
+             'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
+          )),
+          5 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'name' => 'occasion',
+             'title' => 'Occasion',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'select',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'options' => 
+            array (
+              0 => 
               array (
-                'key' => 'UK7',
-                'value' => 'UK7',
+                'key' => 'Casual',
+                'value' => 'Casual',
               ),
-              7 => 
+              1 => 
               array (
-                'key' => 'UK8',
-                'value' => 'UK8',
+                'key' => 'Formal',
+                'value' => 'Formal',
               ),
-              8 => 
+              2 => 
               array (
-                'key' => 'UK9',
-                'value' => 'UK9',
+                'key' => 'Party',
+                'value' => 'Party',
+              ),
+            ),
+             'width' => '',
+             'defaultValue' => '',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'columnLength' => 190,
+             'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
+          )),
+          6 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+             'name' => 'brand',
+             'title' => 'Brand',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'select',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'options' => 
+            array (
+              0 => 
+              array (
+                'key' => 'Allen Solly',
+                'value' => 'Allen Solly',
+              ),
+              1 => 
+              array (
+                'key' => 'H&M',
+                'value' => 'H&M',
+              ),
+              2 => 
+              array (
+                'key' => 'Roadster',
+                'value' => 'Roadster',
+              ),
+              3 => 
+              array (
+                'key' => 'Louis Philippe',
+                'value' => 'Louis Philippe',
+              ),
+              4 => 
+              array (
+                'key' => 'Adidas',
+                'value' => 'Adidas',
+              ),
+              5 => 
+              array (
+                'key' => 'Spykar',
+                'value' => 'Spykar',
               ),
             ),
              'width' => '',
@@ -343,8 +434,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
   array (
     0 => 
     array (
-      'classname' => 'Footwear',
-      'fieldname' => 'WomenFootwear',
+      'classname' => 'Clothing',
+      'fieldname' => 'clothingItem',
     ),
   ),
 ));
