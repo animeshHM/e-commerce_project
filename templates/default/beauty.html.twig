@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Electronics</title>
+		<title>Avira</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	</head>
 
@@ -26,13 +26,13 @@
 			{% for object in object %}
 				<div class="col">
 					<div class="card h-100">
-						<img src="{{ object.getProductImage }}" class="rounded card-img-top" alt="..." height="530px" width="80px";> 
+						<img src="{{ object.getProductImage }}" class="rounded card-img-top" alt="..." height="340px" width="80px";> 
 						<div class="card-body">
 							{# <h5 class="card-title">ProductName: {{ object.getProductName }}</h5> #}
 							<p class="card-text">Product ID :
 								{{ object.getProductID }}</p>
-							<p class="card-text">Product Image :
-								{{ object.getProductImage }}</p>
+							{# <p class="card-text">Product Image :
+								{{ object.getProductImage }}</p> #}
 							<p class="card-text">Description :
 								{{ object.getDescription }}</p>
 							<p class="card-text">Price :
@@ -43,10 +43,6 @@
 								{{ object.getExpiryDate }}</p>
 							<p class="card-text">Brands :
 								{{ object.getBrands }}</p>
-							<p class="card-text">Quantity :
-								{{ object.getQuantity }}</p>
-							<p class="card-text">Ratings :
-								{{ object.getRatings }}</p>
 
                             <!--PRODUCT :: EYELINER  -->
 							 {% if object.getBeautyType=='Eyeliner' %} 

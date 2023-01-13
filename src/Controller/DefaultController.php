@@ -47,14 +47,123 @@ class DefaultController extends FrontendController
         return $this->render('default/home.html.twig');
     }
 
-    /**@Route("/clothing", name="clothing", methods={"GET"}
+
+
+
+
+
+    /**
+     * @Route("/clothing", name="clothing", methods={"GET"})
      * @param Request $request
      * @return Response
      */
     public function clothingAction(Request $request): Response
     {
-        return $this->render('default/clothing.html.twig');
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("RAND()", false);
+        $items->setOrder('asc');
+        return $this->render('default/clothing.html.twig', ['object' => $items]);
     }
+
+    /**
+     * @Route("/topWear", name="topWear", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function topWearAction(Request $request): Response
+    {
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("productName", false);
+        $items->setOrder('asc');
+        $topWear = [];
+        foreach ($items as $item) {
+            if ($item->getClothingType() == 'TopWear') {
+                array_push($topWear, $item);
+            }
+        }
+        return $this->render('default/clothing.html.twig', ['object' => $topWear]);
+    }
+
+    /**
+     * @Route("/bottomWear", name="bottomWear", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function bottomWearAction(Request $request): Response
+    {
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("productName", false);
+        $items->setOrder('asc');
+        $bottomWear = [];
+        foreach ($items as $item) {
+            if ($item->getClothingType() == 'BottomWear') {
+                array_push($bottomWear, $item);
+            }
+        }
+        return $this->render('default/clothing.html.twig', ['object' => $bottomWear]);
+    }
+
+    /**
+     * @Route("/ethnicWear", name="ethnicWear", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function ethnicWearAction(Request $request): Response
+    {
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("productName", false);
+        $items->setOrder('asc');
+        $ethnicWear = [];
+        foreach ($items as $item) {
+            if ($item->getClothingType() == 'EthnicWear') {
+                array_push($ethnicWear, $item);
+            }
+        }
+        return $this->render('default/clothing.html.twig', ['object' => $ethnicWear]);
+    }
+
+    /**
+     * @Route("/menClothing", name="menClothing", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function menClothingAction(Request $request): Response
+    {
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("productName", false);
+        $items->setOrder('asc');
+        $menClothing = [];
+        foreach ($items as $item) {
+            if ($item->getGender() == 'Male') {
+                array_push($menClothing, $item);
+            }
+        }
+        return $this->render('default/clothing.html.twig', ['object' => $menClothing]);
+    }
+
+    /**
+     * @Route("/womenClothing", name="womenClothing", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function womenClothingAction(Request $request): Response
+    {
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("productName", false);
+        $items->setOrder('asc');
+        $womenClothing = [];
+        foreach ($items as $item) {
+            if ($item->getGender() == 'Female') {
+                array_push($womenClothing, $item);
+            }
+        }
+        return $this->render('default/clothing.html.twig', ['object' => $womenClothing]);
+    }
+
+
+
+
+
 
 
 
@@ -66,90 +175,88 @@ class DefaultController extends FrontendController
      * @return Response
      */
     public function beautyAction(Request $request): Response
-    {   
-    $item = new DataObject\Beauty\Listing();
-    $item->setOrderKey("productId");
-    $item->setOrder('asc');
-        return $this->render('default/beauty.html.twig', ['object'=>$item]);
+    {
+        $item = new DataObject\Beauty\Listing();
+        $item->setOrderKey("productId");
+        $item->setOrder('asc');
+        return $this->render('default/beauty.html.twig', ['object' => $item]);
     }
-    
+
     /**
-    * @Route("/eyeliner", name="eyeliner", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/eyeliner", name="eyeliner", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function eyelinerAction(Request $request): Response
     {
         $items = new DataObject\Beauty\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $eyeliner = [];
-        foreach ($items as $item){
-            if ($item->getbeautyType()=='Eyeliner') {
+        foreach ($items as $item) {
+            if ($item->getbeautyType() == 'Eyeliner') {
                 array_push($eyeliner, $item);
             }
         }
-    return $this->render('default/beauty.html.twig', ['object'=>$eyeliner]);
+        return $this->render('default/beauty.html.twig', ['object' => $eyeliner]);
     }
 
     /**
-    * @Route("/lipstick", name="lipstick", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/lipstick", name="lipstick", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function lipstickAction(Request $request): Response
     {
         $items = new DataObject\Beauty\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $lipstick = [];
-        foreach ($items as $item){
-            if ($item->getbeautyType()=='Lipstick') {
+        foreach ($items as $item) {
+            if ($item->getbeautyType() == 'Lipstick') {
                 array_push($lipstick, $item);
             }
         }
-    return $this->render('default/beauty.html.twig', ['object'=>$lipstick]);
- 
-     }
+        return $this->render('default/beauty.html.twig', ['object' => $lipstick]);
+    }
 
     /**
-    * @Route("/perfume", name="perfume", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/perfume", name="perfume", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function perfumeAction(Request $request): Response
     {
         $items = new DataObject\Beauty\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $perfume = [];
-        foreach ($items as $item){
-            if ($item->getbeautyType()=='Perfume') {
+        foreach ($items as $item) {
+            if ($item->getbeautyType() == 'Perfume') {
                 array_push($perfume, $item);
             }
         }
-    return $this->render('default/beauty.html.twig', ['object'=>$perfume]);
- 
-     }
+        return $this->render('default/beauty.html.twig', ['object' => $perfume]);
+    }
 
     /**
-    * @Route("/shampoo", name="shampoo", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/shampoo", name="shampoo", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function shampooAction(Request $request): Response
     {
         $items = new DataObject\Beauty\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $shampoo = [];
-        foreach ($items as $item){
-            if ($item->getbeautyType()=='Shampoo') {
+        foreach ($items as $item) {
+            if ($item->getbeautyType() == 'Shampoo') {
                 array_push($shampoo, $item);
             }
         }
-        return $this->render('default/beauty.html.twig', ['object'=>$shampoo]);
-     }
+        return $this->render('default/beauty.html.twig', ['object' => $shampoo]);
+    }
 
 
 
@@ -157,7 +264,7 @@ class DefaultController extends FrontendController
 
 
 
-     /**
+    /**
      * @Route("/footwear", name="footwear", methods={"GET"}
      * @param Request $request
      * @return Response
@@ -167,102 +274,102 @@ class DefaultController extends FrontendController
         $items = new DataObject\Footwear\Listing();
         $items->setOrderKey("productName");
         $items->setOrder('asc');
-        return $this->render('default/footwear.html.twig', ['object'=>$items]);
+        return $this->render('default/footwear.html.twig', ['object' => $items]);
     }
 
-     /**
-    * @Route("/boots", name="boots", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+    /**
+     * @Route("/boots", name="boots", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function bootsAction(Request $request): Response
     {
         $items = new DataObject\Footwear\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $boots = [];
-        foreach ($items as $item){
-            if ($item->getfootwearType()=='Boots') {
+        foreach ($items as $item) {
+            if ($item->getfootwearType() == 'Boots') {
                 array_push($boots, $item);
             }
         }
-    return $this->render('default/footwear.html.twig', ['object'=>$boots]);
+        return $this->render('default/footwear.html.twig', ['object' => $boots]);
     }
 
     /**
-    * @Route("/heels", name="heels", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/heels", name="heels", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function heelsAction(Request $request): Response
     {
         $items = new DataObject\Footwear\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $heels = [];
-        foreach ($items as $item){
-            if ($item->getfootwearType()=='Heels') {
+        foreach ($items as $item) {
+            if ($item->getfootwearType() == 'Heels') {
                 array_push($heels, $item);
             }
         }
-    return $this->render('default/footwear.html.twig', ['object'=>$heels]);
+        return $this->render('default/footwear.html.twig', ['object' => $heels]);
     }
 
     /**
-    * @Route("/sandals", name="sandals", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/sandals", name="sandals", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function sandalsAction(Request $request): Response
     {
         $items = new DataObject\Footwear\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $sandals = [];
-        foreach ($items as $item){
-            if ($item->getfootwearType()=='Sandals') {
+        foreach ($items as $item) {
+            if ($item->getfootwearType() == 'Sandals') {
                 array_push($sandals, $item);
             }
         }
-    return $this->render('default/footwear.html.twig', ['object'=>$sandals]);
+        return $this->render('default/footwear.html.twig', ['object' => $sandals]);
     }
 
     /**
-    * @Route("/formalshoes", name="formalshoes", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/formalshoes", name="formalshoes", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function formalshoesAction(Request $request): Response
     {
         $items = new DataObject\Footwear\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $formalshoes = [];
-        foreach ($items as $item){
-            if ($item->getfootwearType()=='FormalShoes') {
+        foreach ($items as $item) {
+            if ($item->getfootwearType() == 'FormalShoes') {
                 array_push($formalshoes, $item);
             }
         }
-    return $this->render('default/footwear.html.twig', ['object'=>$formalshoes]);
+        return $this->render('default/footwear.html.twig', ['object' => $formalshoes]);
     }
 
     /**
-    * @Route("/sportsshoes", name="sportsshoes", methods={"GET"})
-    * @param Request $request
-    * @return Response
-    */
+     * @Route("/sportsshoes", name="sportsshoes", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
     public function sportsshoesAction(Request $request): Response
     {
         $items = new DataObject\Footwear\Listing();
         $items->setOrderKey("productID", false);
         $items->setOrder('asc');
         $sportsshoes = [];
-        foreach ($items as $item){
-            if ($item->getfootwearType()=='SportsShoes') {
+        foreach ($items as $item) {
+            if ($item->getfootwearType() == 'SportsShoes') {
                 array_push($sportsshoes, $item);
             }
         }
-    return $this->render('default/footwear.html.twig', ['object'=>$sportsshoes]);
+        return $this->render('default/footwear.html.twig', ['object' => $sportsshoes]);
     }
 
 
@@ -280,5 +387,24 @@ class DefaultController extends FrontendController
     public function feedbackAction(Request $request): Response
     {
         return $this->render('default/feedback.html.twig');
+    }
+
+    /**
+     * @Route("/login", name="login", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function loginAction(Request $request): Response
+    {
+        return $this->render('default/login.html.twig');
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function signupAction(Request $request): Response
+    {
+        return $this->render('default/signup.html.twig');
     }
 }

@@ -7,7 +7,7 @@
  * Fields Summary:
  * - productName [input]
  * - productID [input]
- * - description [wysiwyg]
+ * - description [textarea]
  * - Price [quantityValue]
  * - Gender [select]
  * - Color [rgbaColor]
@@ -25,7 +25,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Footwear',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673522026,
+   'modificationDate' => 1673594629,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -151,7 +151,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValueGenerator' => '',
               )),
               2 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Wysiwyg::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
                  'name' => 'description',
                  'title' => 'Description',
                  'tooltip' => '',
@@ -162,7 +162,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'wysiwyg',
+                 'fieldtype' => 'textarea',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -170,11 +170,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'width' => '600px',
-                 'height' => '',
-                 'toolbarConfig' => '',
+                 'width' => '400px',
+                 'height' => '100px',
+                 'maxLength' => NULL,
+                 'showCharCount' => false,
                  'excludeFromSearchIndex' => false,
-                 'maxCharacters' => '',
               )),
               3 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
@@ -422,18 +422,18 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                   ),
                   1 => 
                   array (
-                    'key' => 'Shoes',
-                    'value' => 'Shoes',
+                    'key' => 'Sports Shoes',
+                    'value' => 'SportsShoes',
                   ),
                   2 => 
                   array (
-                    'key' => 'FormalShoes',
+                    'key' => 'Formal Shoes',
                     'value' => 'FormalShoes',
                   ),
                   3 => 
                   array (
                     'key' => 'Heels',
-                    'value' => 'Heals',
+                    'value' => 'Heels',
                   ),
                   4 => 
                   array (
