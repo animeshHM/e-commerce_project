@@ -25,7 +25,7 @@ class   Beautyviacsv extends AbstractCommand {
 
 $object=new Beauty();
 
-$object->setKey('eyeliner2csv');
+$object->setKey('Eyeliner2');
 
 $object->setParentId(15);
 
