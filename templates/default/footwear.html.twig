@@ -2,86 +2,161 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Electronics</title>
+		<title>Avira</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	</head>
 
 	<body style="background-color:#551606">
 		{{ pimcore_snippet("header") }}
-        
-        <div class="row row-cols-3 row-cols-md-3 g-4">
-			{% for object in object %}
-				<div class="col">
-					<div class="card h-100">
-						<img src="{{ object.getProductImage }}" class="rounded card-img-top" alt="..." height="530px" width="80px";> 
-						<div class="card-body">
-							<p class="card-text">Brand :
-								{{ object.getBrand }}</p>
-                            <p class="card-text">Price :
-								{{ object.getPrice }}</p>
-							<p class="card-text">Rating :
-								{{ object.getRating }}</p>
-                            <p class="card-text">Quantity :
-								{{ object.getQuantity }}</p>
-							<p class="card-text">Product Image :
-								{{ object.getProductImage }}</p>
-							<p class="card-text">Description :
-								{{ object.getDescription }}</p>
-							
-							<p class="card-text">Manufacturing Date :
-								{{ object.getManufacturingDate}}</p>
-							<p class="card-text">Expiry Date :
-								{{ object.getExpiryDate }}</p>
-							
 
-                            <!--PRODUCT :: EYELINER  -->
-							 {% if object.getBeautyType=='Eyeliner' %} 
-								 <p class="card-text">Features :
-									{{ object.getMakeupProducts.getEyeliner.getFeatures }}</p> 
-								<p class="card-text">Color Shade Name :
-									{{ object.getMakeupProducts.getEyeliner.getColorShadeName }}</p>
-								<p class="card-text">Apply Type :
-									{{ object.getMakeupProducts.getEyeliner.getApplyType }}</p>
+        <!-- Carousel -->
+		<div
+			id="demo" class="carousel slide" data-bs-ride="carousel">
 
-                            <!--PRODUCT :: LIPSTICK -->
-							{% elseif object.getBeautyType=='Lipstick' %} 
-								<p class="card-text">Colour Family :
-									{{ object.getMakeupProducts.getLipMakeup.getColourFamily }}</p>
-								<p class="card-text">Finish :
-									{{ object.getMakeupProducts.getLipMakeup.getLipstickFinish }}</p>
-								<p class="card-text">Formulation :
-									{{ object.getMakeupProducts.getLipMakeup.getFormulation }}</p>
+			<!-- Indicators/dots -->
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
 
-                            <!--PRODUCT :: PERFUME -->
-							{% elseif object.getBeautyType=='Perfume' %}
-								<p class="card-text">Formulation :
-									{{ object.getMakeupProducts.getPerfume.getFormulation }}</p>
-								<p class="card-text">Fragrance :
-									{{ object.getMakeupProducts.getPerfume.getFragrance }}</p>
-								<p class="card-text">Strenght :
-									{{ object.getMakeupProducts.getPerfume.getStrenght}}</p>
+			</div>
 
-                             <!--PRODUCT :: SHAMPOO -->
-							{% elseif object.getBeautyType=='Shampoo' %}
-								<p class="card-text">Hair Type :
-									{{ object.getMakeupProducts.getShampoo.getHairType}}</p>
-								<p class="card-text">Key Ingredients :
-									{{ object.getMakeupProducts.getShampoo.getKeyIngredients}}</p>
-								<p class="card-text">Preference :
-									{{ object.getMakeupProducts.getShampoo.getPreference }}</p> 
+			<!-- The slideshow/carousel -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="HomeImgs/footimg1.png" alt="" class="d-block" style="width:100%">
+				</div>
+				<div class="carousel-item">
+					<img src="HomeImgs/footimg2.png" alt="" class="d-block" style="width:100%">
+				</div>
+				<div class="carousel-item">
+					<img src="HomeImgs/footimg3.png" alt="" class="d-block" style="width:100%">
+				</div>
+			</div>
+
+			<!-- Left and right controls/icons -->
+			<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</button>
+        </div>
+		<br>
 
 
-							{% endif %}
+       
+		<div class="container">
+			<br>
+			<div>
+				<a href="footwear" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
+				<a href="boots" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Boots</a>
+				<a href="heels" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Heels</a>
+				<a href="sandals" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Sandals</a>
+				<a href="sportsshoes" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Sports Shoes</a>
+				<a href="formalshoes" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Formal Shoes</a>
+
+			</div>
+			<br>
+
+			<div class="row row-cols-3 row-cols-md-3 g-4">
+				{% for object in object %}
+					<div class="col">
+						<div class="card h-100">
+							<img src="{{ object.getProductImage }}" class="rounded card-img-top" alt="..." height="340px" width="80px" ;>
+							<div class="card-body">
+								<h5 class="card-text">Product Name :
+									{{ object.getProductName }}</h5>
+								<p class="card-text">Product ID :
+									{{ object.getProductID }}</p>
+								<p class="card-text">Brand :
+									{{ object.getBrand }}</p>
+								<p class="card-text" style="color:green;">Price :
+									{{ object.getPrice }}</p>
+								{# <p class="card-text">Rating :
+									{{ object.getRating }}</p>
+								<p class="card-text">Quantity :
+									{{ object.getQuantity }}</p> #}
+								<p class="card-text">Gender :
+									{{ object.getGender }}</p>
+								{# <p class="card-text">Color :
+									{{ object.getColor }}</p>
+								<p class="card-text">Product Image :
+									{{ object.getProductImage }}</p> #}
+								<p class="card-text">Description :
+									{{ object.getDescription }}</p>
+
+
+								<!--PRODUCT :: BOOTS  -->
+								{% if object.getFootwearType=='Boots' %}
+									<p class="card-text">Types :
+										{{ object.getFootwearProduct.getBoots.getTypes }}</p>
+									<p class="card-text">Size :
+										{{ object.getFootwearProduct.getBoots.getSize }}</p>
+									<p class="card-text">Toe Shape :
+										{{ object.getFootwearProduct.getBoots.getToeShape }}</p>
+
+									<!--PRODUCT :: HEELS  -->
+								{% elseif object.getFootwearType=='Heels' %}
+									<p class="card-text">HeelHeight :
+										{{ object.getFootwearProduct.getHeels.getHeelHeight }}</p>
+									<p class="card-text">Pattern :
+										{{ object.getFootwearProduct.getHeels.getPattern}}</p>
+									<p class="card-text">Sole Material :
+										{{ object.getFootwearProduct.getHeels.getSoleMaterial }}</p>
+									<p class="card-text">Toe Shape :
+										{{ object.getFootwearProduct.getHeels.getToeShape }}</p>
+									<p class="card-text">Occasion :
+										{{ object.getFootwearProduct.getHeels.getOccasion }}</p>
+
+
+									<!--PRODUCT :: FORMAL SHOES -->
+								{% elseif object.getType=='FormalShoes' %}
+									<p class="card-text">Toe Shape :
+										{{ object.getFootwearProduct.getFormalShoes.getToeShape }}</p>
+									<p class="card-text">Pattern :
+										{{ object.getFootwearProduct.getFormalShoes.getPattern}}</p>
+									<p class="card-text">Materials :
+										{{ object.getFootwearProduct.getFormalShoes.getMaterials }}</p>
+									<p class="card-text">Shoe Type :
+										{{ object.getFootwearProduct.getFormalShoes.getShoeType}}</p>
+									<p class="card-text">Size :
+										{{ object.getFootwearProduct.getFormalShoes.getSize}}</p>
+
+
+									<!--PRODUCT :: SANDALS -->
+								{% elseif object.getType=='Sandals' %}
+									<p class="card-text">Fastening :
+										{{ object.getFootwearProduct.Sandals.getFastening }}</p>
+									<p class="card-text">Materials :
+										{{ object.getFootwearProduct.getSandals.getMaterials }}</p>
+									<p class="card-text">Sustainable:
+										{{ object.getFootwearProduct.getSandals.getSustainable}}</p>
+                                    <p class="card-text">Size :
+										{{ object.getFootwearProduct.getSandals.getSize}}</p>
+
+                                    <!--PRODUCT :: SPORTS SHOES -->
+								{% elseif object.getType=='SportsShoes' %}
+                                    <p class="card-text">Running Type :
+										{{ object.getFootwearProduct.getSportsShoes.getRunningType }}</p>
+                                    <p class="card-text">Sole Material :
+										{{ object.getFootwearProduct.getSportsShoes.getSoleMaterial }}</p>
+									<p class="card-text">Fastening :
+										{{ object.getFootwearProduct.getSportsShoes.getFastening }}</p>
+									<p class="card-text">Cushioning:
+										{{ object.getFootwearProduct.getSportsShoes.getCushioning}}</p>
+                                    <p class="card-text">Size :
+										{{ object.getFootwearProduct.getSportsShoes.getSize}}</p>
+									
+								{% endif %}
+							</div>
 						</div>
 					</div>
-				</div>
-			{% endfor %}
-		 </div>
-
-
-        {{ pimcore_snippet("footer") }}
+				{% endfor %}
+			</div>
+			<br><br>
+		</div>
+		{{ pimcore_snippet("footer") }}
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-		</body>
 	</body>
-</html>
-	
+</html></body></html>
