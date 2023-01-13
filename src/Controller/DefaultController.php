@@ -40,6 +40,16 @@ class DefaultController extends FrontendController
     }
 
     /**
+     * @Route("/home", name="home", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function homeAction(Request $request): Response
+    {
+        return $this->render('default/home.html.twig');
+    }
+
+    /**
      * @Route("/electronics", name="electronics", methods={"GET"})
      * @param Request $request
      * @return Response
@@ -136,7 +146,7 @@ class DefaultController extends FrontendController
     public function clothingAction(Request $request): Response
     {
         $items = new DataObject\Clothing\Listing();
-        $items->setOrderKey("productName");
+        $items->setOrderKey("RAND()", false);
         $items->setOrder('asc');
         return $this->render('default/clothing.html.twig', ['object'=>$items]);
     }
@@ -234,5 +244,14 @@ class DefaultController extends FrontendController
             }
         }
         return $this->render('default/clothing.html.twig', ['object'=>$womenClothing]);
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function feedbackAction(Request $request): Response
+    {
+        return $this->render('default/feedback.html.twig');
     }
 }
