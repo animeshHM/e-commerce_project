@@ -42,7 +42,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
-         'title' => '',
+         'title' => 'Refrigerator',
          'width' => '',
          'height' => '',
          'collapsible' => false,

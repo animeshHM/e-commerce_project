@@ -8,7 +8,7 @@
  * - USBPortsCount [numeric]
  * - HDMIPortsCount [numeric]
  * - isSmartTVEnabled [booleanSelect]
- * - mountingType [multiselect]
+ * - mountingType [select]
  * - brightness [quantityValue]
  * - speakerCount [numeric]
  * - wattage [quantityValue]
@@ -43,7 +43,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
-         'title' => '',
+         'title' => 'Television',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -296,7 +296,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
           )),
           6 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'mountingType',
              'title' => 'Mounting Type',
              'tooltip' => '',
@@ -307,7 +307,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -317,14 +317,24 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'options' => 
             array (
+              0 => 
+              array (
+                'key' => 'Wall Mounted',
+                'value' => 'Wall Mounted',
+              ),
+              1 => 
+              array (
+                'key' => 'Table Mounted',
+                'value' => 'Table Mounted',
+              ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
+             'defaultValue' => '',
              'optionsProviderClass' => '',
              'optionsProviderData' => '',
+             'columnLength' => 190,
              'dynamicOptions' => false,
+             'defaultValueGenerator' => '',
           )),
           7 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(

@@ -45,7 +45,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Mobile',
+         'title' => 'Laptop',
          'width' => '',
          'height' => '',
          'collapsible' => false,

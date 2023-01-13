@@ -13,7 +13,7 @@
  * - refreshRate [quantityValue]
  * - simSlotType [select]
  * - chargingSlotType [select]
- * - cellularTechnology [multiselect]
+ * - Is5GEnabled [booleanSelect]
  * - brand [select]
  */
 
@@ -41,7 +41,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Mobile',
+         'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
          'title' => 'Mobile',
@@ -235,13 +235,13 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               ),
               1 => 
               array (
-                'key' => 'LED',
-                'value' => 'LED',
+                'key' => 'IPS-LCD',
+                'value' => 'IPS-LCD',
               ),
               2 => 
               array (
-                'key' => 'LCD',
-                'value' => 'LCD',
+                'key' => 'TFT-LCD',
+                'value' => 'TFT-LCD',
               ),
               3 => 
               array (
@@ -387,20 +387,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'hz',
              'validUnits' => 
             array (
-              0 => 'GB',
-              1 => 'hz',
-              2 => 'inch',
-              3 => 'l',
-              4 => 'mAh',
-              5 => 'mm',
-              6 => 'mp',
-              7 => 'nits',
-              8 => 'px',
-              9 => 'rupees',
-              10 => 'wt',
+              0 => 'hz',
             ),
              'integer' => false,
              'unsigned' => false,
@@ -482,8 +472,13 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               ),
               1 => 
               array (
-                'key' => 'USB',
-                'value' => 'USB',
+                'key' => 'Micro USB',
+                'value' => 'Micro USB',
+              ),
+              2 => 
+              array (
+                'key' => 'Apple Lightning Port',
+                'value' => 'Apple Lightning Port',
               ),
             ),
              'width' => '',
@@ -495,9 +490,9 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           11 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
-             'name' => 'cellularTechnology',
-             'title' => 'Cellular Technology',
+          Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
+             'name' => 'Is5GEnabled',
+             'title' => 'Is 5G Enabled',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -506,7 +501,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'multiselect',
+             'fieldtype' => 'booleanSelect',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -514,36 +509,28 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
+             'yesLabel' => 'yes',
+             'noLabel' => 'no',
+             'emptyLabel' => 'empty',
              'options' => 
             array (
               0 => 
               array (
-                'key' => '2G',
-                'value' => '2G',
+                'key' => 'empty',
+                'value' => 0,
               ),
               1 => 
               array (
-                'key' => '3G',
-                'value' => '3G',
+                'key' => 'yes',
+                'value' => 1,
               ),
               2 => 
               array (
-                'key' => '4G',
-                'value' => '4G',
-              ),
-              3 => 
-              array (
-                'key' => '5G',
-                'value' => '5G',
+                'key' => 'no',
+                'value' => -1,
               ),
             ),
              'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'renderType' => 'list',
-             'optionsProviderClass' => '',
-             'optionsProviderData' => '',
-             'dynamicOptions' => false,
           )),
           12 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
