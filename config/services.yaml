@@ -43,6 +43,7 @@ services:
     App\EventListener\BeautyObjectListener:
         tags:
             - { name: kernel.event_listener, event: pimcore.dataobject.preUpdate, method: beforeUpdate }
+            
 
     #
     # CONTROLLERS
