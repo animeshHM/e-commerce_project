@@ -38,7 +38,8 @@ class DefaultController extends FrontendController
         return $this->render('default/footer.html.twig');
     }
 
-    /**@Route("/home", name="home", methods={"GET"}
+    /**
+     * @Route("/home", name="home", methods={"GET"})
      * @param Request $request
      * @return Response
      */
