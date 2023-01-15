@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use Google\Service\Dns\ResponsePoliciesListResponse;
 use Pimcore\Controller\FrontendController;
 use Pimcore\Model\DataObject;
+use Pimcore\Model\DataObject\Feedback;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Pimcore\Model\DataObject\Electronics;
@@ -472,4 +474,27 @@ class DefaultController extends FrontendController
         return $this->render('default/feedback.html.twig');
     }
 
+    /**
+     * @Route("/submit", name="submit", methods={"POST"})
+     * @param Request $request
+     * @return Response
+     */
+    public function submit(Request $request): Response
+    {
+        $ob = new Feedback;
+        $key = rand(1, 100000);
+        $ob->setKey($key);
+        $ob->setParentId(35);
+        $ob->setName($_POST["Name"]);
+        $ob->setEmail($_POST["Email"]);
+        $ob->setMessage($_POST["Message"]);
+        $ob->save();
+
+        $mail=new \Pimcore\Mail();
+        $mail->to('fortesting@gmail.com');
+        $mail->text("this is testing mail");
+        $mail->send();
+
+        return $this->render('default/home.html.twig');
+    }
 }

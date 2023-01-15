@@ -13,26 +13,27 @@
 
 		<!-- FEEDBACK FORM-->
 		<div class="container-sm">
-			<form class="text-center border border-light p-5" action="#!">
+			<form class="text-center border border-light p-5" action="{{ path('submit') }}" method="POST">
 				<h1>
 					<center>FEEDBACK FORM</center>
 				</h1><br><br>
 				<!-- Name -->
 				<input
-				type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+				type="text" id="Name" name="Name" class="form-control mb-4" placeholder="Name">
 
 				<!-- Email -->
 				<input
-				type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+				type="email" id="Email" name="Email" class="form-control mb-4" placeholder="E-mail">
 
 				<!-- Message -->
 				<div class="form-group">
-					<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
+					<textarea class="form-control rounded-0" id="Message" name="Message" rows="3" placeholder="Message"></textarea>
 				</div>
 				<br>
 
 				<!-- Send button -->
-				<button class="btn btn-info btn-block" type="submit"><a href="http://ecommerce/email">Submit</button>
+				{# <button class="btn btn-info btn-block" type="submit"><a href="http://ecommerce/submit">Submit</button></a> #}
+                <button class="btn btn-info btn-block" type="submit">Submit</button>
 			</form>
 		</div>
 		<br><br>
