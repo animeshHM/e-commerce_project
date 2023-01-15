@@ -9,9 +9,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MailController extends FrontendController
 {
-    /**
-  * @Route("/email", name="login", methods={"GET"})
-   */
+  /**
+  * @Route("/email", name="email", methods={"GET"})
+  */
   public function Emailtrigger()
   {
     $mail=new \Pimcore\Mail();

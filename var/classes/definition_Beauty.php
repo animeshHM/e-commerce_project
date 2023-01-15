@@ -25,7 +25,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Beauty',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1673609947,
+   'modificationDate' => 1673680983,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -76,7 +76,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
              'name' => 'productID',
-             'title' => 'Product I D',
+             'title' => 'Product ID',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
