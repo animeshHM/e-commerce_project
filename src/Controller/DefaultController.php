@@ -51,6 +51,26 @@ class DefaultController extends FrontendController
         return $this->render('default/home.html.twig');
     }
 
+    // /**
+    //  * @Route("/electronics/{page}", name="electronics", methods={"GET", "POST"})
+    //  * @param Request $request
+    //  * @return Response
+    //  */
+    // public function electronicsPageAction($page): Response
+    // {
+    //     $items = new DataObject\Electronics\Listing();
+    //     $items->setOrderKey("productName");
+    //     $items->setOrder('asc');
+    //     $obj=[];
+    //     $pageItems = [];
+    //     foreach ($items as $item){
+    //         array_push($obj, $item);
+    //     }
+    //     $pageItems = array_slice($obj, ($page - 1) * 3, 3);
+    //     $totalPages = count($obj)/3;
+    //     return $this->render('default/electronics.html.twig', ['object'=>$pageItems, 'number'=>$totalPages]);
+    // }
+
     /**
      * @Route("/electronics", name="electronics", methods={"GET"})
      * @param Request $request
@@ -482,7 +502,7 @@ class DefaultController extends FrontendController
     public function submit(Request $request): Response
     {
         $ob = new Feedback;
-        $key = rand(1, 100000);
+        $key = "feedback".time();
         $ob->setKey($key);
         $ob->setParentId(35);
         $ob->setName($_POST["Name"]);
