@@ -5,6 +5,9 @@
  * Variants: no
  *
  * Fields Summary:
+ * - Name [input]
+ * - Email [input]
+ * - Message [textarea]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -12,12 +15,12 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'id' => '6',
    'name' => 'Feedback',
    'description' => '',
-   'creationDate' => NULL,
-   'modificationDate' => 1673860770,
+   'creationDate' => 0,
+   'modificationDate' => 1673863683,
    'userOwner' => 2,
-   'userModification' => NULL,
+   'userModification' => 2,
    'parentClass' => '',
-   'implementsInterfaces' => NULL,
+   'implementsInterfaces' => '',
    'listingParentClass' => '',
    'useTraits' => '',
    'listingUseTraits' => '',
@@ -31,13 +34,154 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'fieldDefinitions' => 
   array (
   ),
-   'layoutDefinitions' => NULL,
-   'icon' => NULL,
-   'previewUrl' => NULL,
-   'group' => NULL,
+   'layoutDefinitions' => 
+  Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+     'name' => 'pimcore_root',
+     'type' => NULL,
+     'region' => NULL,
+     'title' => NULL,
+     'width' => 0,
+     'height' => 0,
+     'collapsible' => false,
+     'collapsed' => false,
+     'bodyStyle' => NULL,
+     'datatype' => 'layout',
+     'permissions' => NULL,
+     'children' => 
+    array (
+      0 => 
+      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+         'name' => 'Layout',
+         'type' => NULL,
+         'region' => NULL,
+         'title' => '',
+         'width' => '',
+         'height' => '',
+         'collapsible' => false,
+         'collapsed' => false,
+         'bodyStyle' => '',
+         'datatype' => 'layout',
+         'permissions' => NULL,
+         'children' => 
+        array (
+          0 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'Name',
+             'title' => 'Name',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'input',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
+          )),
+          1 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'Email',
+             'title' => 'Email',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'input',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
+            array (
+            ),
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
+          )),
+          2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+             'name' => 'Message',
+             'title' => 'Message',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'textarea',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'width' => '',
+             'height' => '',
+             'maxLength' => NULL,
+             'showCharCount' => false,
+             'excludeFromSearchIndex' => false,
+          )),
+        ),
+         'locked' => false,
+         'blockedVarsForExport' => 
+        array (
+        ),
+         'fieldtype' => 'panel',
+         'layout' => NULL,
+         'border' => false,
+         'icon' => '',
+         'labelWidth' => 0,
+         'labelAlign' => 'left',
+      )),
+    ),
+     'locked' => false,
+     'blockedVarsForExport' => 
+    array (
+    ),
+     'fieldtype' => 'panel',
+     'layout' => NULL,
+     'border' => false,
+     'icon' => NULL,
+     'labelWidth' => 100,
+     'labelAlign' => 'left',
+  )),
+   'icon' => '',
+   'previewUrl' => '',
+   'group' => 'Ecommerce',
    'showAppLoggerTab' => false,
-   'linkGeneratorReference' => NULL,
-   'previewGeneratorReference' => NULL,
+   'linkGeneratorReference' => '',
+   'previewGeneratorReference' => '',
    'compositeIndices' => 
   array (
   ),
@@ -48,6 +192,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     'grid' => 
     array (
       'id' => true,
+      'key' => false,
       'path' => true,
       'published' => true,
       'modificationDate' => true,
@@ -56,6 +201,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
     'search' => 
     array (
       'id' => true,
+      'key' => false,
       'path' => true,
       'published' => true,
       'modificationDate' => true,

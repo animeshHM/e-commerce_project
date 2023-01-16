@@ -487,6 +487,32 @@ class DefaultController extends FrontendController
     }
 
     /**
+    * @Route("/submit", name="submit", methods={"POST"})
+    * @param Request $request
+    * @return Response
+    */
+    public function submit(Request $request): Response
+    {
+        $ob = new DataObject\Feedback;
+        $key = "feedback".time();
+        $ob->setKey($key);
+        $ob->setParentId(54);
+        $ob->setName($_POST["Name"]);
+        $ob->setEmail($_POST["Email"]);
+        $ob->setMessage($_POST["Message"]);
+        $ob->save();
+ 
+        $mail=new \Pimcore\Mail();
+        $mail->to('fortesting@gmail.com');
+        $mail->text("this is testing mail");
+        $mail->send();
+ 
+        return $this->render('default/home.html.twig');
+    }
+
+
+
+    /**
      * @Route("/login", name="login", methods={"GET"})
      * @param Request $request
      * @return Response
