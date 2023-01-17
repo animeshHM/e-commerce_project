@@ -51,25 +51,47 @@ class DefaultController extends FrontendController
         return $this->render('default/home.html.twig');
     }
 
-    // /**
-    //  * @Route("/electronics/{page}", name="electronics", methods={"GET", "POST"})
-    //  * @param Request $request
-    //  * @return Response
-    //  */
-    // public function electronicsPageAction($page): Response
-    // {
-    //     $items = new DataObject\Electronics\Listing();
-    //     $items->setOrderKey("productName");
-    //     $items->setOrder('asc');
-    //     $obj=[];
-    //     $pageItems = [];
-    //     foreach ($items as $item){
-    //         array_push($obj, $item);
-    //     }
-    //     $pageItems = array_slice($obj, ($page - 1) * 3, 3);
-    //     $totalPages = count($obj)/3;
-    //     return $this->render('default/electronics.html.twig', ['object'=>$pageItems, 'number'=>$totalPages]);
-    // }
+    /**
+     * @Route("/allProducts/{page}", methods={"GET", "POST"})
+     * @param Request $request
+     * @return Response
+     */
+    public function allProductsAction($page): Response
+    {
+        $obj=[];
+        $pageItems = [];
+        $items = new DataObject\Electronics\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $items = new DataObject\Footwear\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $items = new DataObject\Beauty\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $pageItems = array_slice($obj, ($page - 1) * 3, 3);
+        $totalPages = ceil(count($obj)/3);
+        return $this->render('default/allProducts.html.twig', ['object'=>$pageItems, 'number'=>$totalPages]);
+    }
 
     /**
      * @Route("/electronics", name="electronics", methods={"GET"})
