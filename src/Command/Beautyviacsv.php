@@ -24,8 +24,8 @@ protected function execute(InputInterface $input, OutputInterface $output): int
 //  return Command::SUCCESS;
 
     $object = new Beauty();
-    $object->setKey('Eyeliner2');
-    $object->setParentId(12);
+    $object->setKey('Eyeliner20');
+    $object->setParentId(6);
     $path = 'public/csv/beauty.csv';
     $file = file($path);
         foreach ($file as $k) {

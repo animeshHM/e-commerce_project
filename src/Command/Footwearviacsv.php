@@ -24,8 +24,8 @@ class Footwearviacsv extends AbstractCommand {
     //  return Command::SUCCESS;
 
     $object = new Footwear();
-    $object->setKey('Heels2');
-    $object->setParentId(33);
+    $object->setKey('Heels20');
+    $object->setParentId(8);
     $path = 'public/csv/footwear.csv';
     $file = file($path);
 
