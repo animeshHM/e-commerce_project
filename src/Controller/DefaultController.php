@@ -539,4 +539,14 @@ class DefaultController extends FrontendController
 
         return $this->render('default/home.html.twig');
     }
+
+    /**
+     * @Route("/cart", name="cart", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function addToCartAction(Request $request): Response
+    {
+        return $this->render('default/cart.html.twig');
+    }
 }
