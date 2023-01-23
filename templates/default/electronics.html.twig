@@ -44,12 +44,18 @@
 		<br>
     <div class="container">
         <br>
-        <div>
-        <a href="electronics" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
-        <a href="laptop" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Laptop</a>
-        <a href="mobile" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Mobile</a>
-        <a href="refrigerator" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Refrigerator</a>
-        <a href="television" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Television</a>
+        <div class="container-fluid d-flex justify-content-between">
+            <div>
+                <a href="electronics" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
+                <a href="laptop" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Laptop</a>
+                <a href="mobile" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Mobile</a>
+                <a href="refrigerator" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Refrigerator</a>
+                <a href="television" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Television</a>
+            </div>
+            <form class="d-flex" role="search" action="{{ path('searchElectronics')}}" method="POST">
+                <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success btn-md active" aria-pressed="true" type="submit">Search</button>
+            </form>
         </div>
         <br>
         <div class="row row-cols-3 row-cols-md-3 g-4">

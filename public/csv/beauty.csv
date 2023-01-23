@@ -1,2 +1,2 @@
-productID,description,Quantity,Price,ManufacturingDate,ExpiryDate,Brands,Ratings,MakeupProducts,BeautyType
-8,Eye Lit You So! Vivid Eyeliner -05 Green Ray (Mint Green)This product is  dermatological tested & approved and 100% safe for your skin.,2,120,2023-01-19,2029-01-15,Lakme,5,Eyeliner,Eyeliner
+productID,productName,description,Quantity,Price,ManufacturingDate,ExpiryDate,Brands,Ratings,MakeupProducts,BeautyType
+8,Eyeliner2,Eye Lit You So! Vivid Eyeliner -05 Green Ray (Mint Green)This product is  dermatological tested & approved and 100% safe for your skin.,2,120,2023-01-19,2029-01-15,Lakme,5,Eyeliner,Eyeliner

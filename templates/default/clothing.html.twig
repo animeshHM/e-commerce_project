@@ -44,14 +44,20 @@
 		<br>
     <div class="container">
         <br>
-        <div>
-        <a href="clothing" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
-        <a href="topWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Top Wear</a>
-        <a href="bottomWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Bottom Wear</a>
-        <a href="ethnicWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Ethnic Wear</a>
-        <a href="menClothing" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Men</a>
-        <a href="womenClothing" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Women</a>
-        </div>
+        <div class="container-fluid d-flex justify-content-between">
+                <div>
+                    <a href="clothing" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
+                    <a href="topWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Top Wear</a>
+                    <a href="bottomWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Bottom Wear</a>
+                    <a href="ethnicWear" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Ethnic Wear</a>
+                    <a href="menClothing" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Men</a>
+                    <a href="womenClothing" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Women</a>
+                </div>
+                <form class="d-flex" role="search" action="{{ path('searchClothing')}}" method="POST">
+                    <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success btn-md active" aria-pressed="true" type="submit">Search</button>
+                </form>
+            </div>
         <br>
         <div class="row row-cols-3 row-cols-md-3 g-4">
             {% for object in object %}

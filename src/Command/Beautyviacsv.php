@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Pimcore\Model\DataObject\Beauty;
 
-class   Beautyviacsv extends AbstractCommand {
+class Beautyviacsv extends AbstractCommand {
 
 protected function configure()
 {
@@ -20,9 +20,6 @@ $this
 
 protected function execute(InputInterface $input, OutputInterface $output): int
 {
-//  $output->writeln("Class to import : " . $input->getArgument("class_name"));
-//  return Command::SUCCESS;
-
     $object = new Beauty();
     $object->setKey('Eyeliner2');
     $object->setParentId(12);
@@ -33,17 +30,19 @@ protected function execute(InputInterface $input, OutputInterface $output): int
         }
 
         $beautyproduct=$csv[1][0];
-        $beautydescription=$csv[1][1];
-        $beautyquantity=$csv[1][2];
-        //$beautyprice=$csv[1][3];
-        // $beautymanufacturingdate=$csv[1][4];
-        // $beautyexpirydate=$csv[1][5];
-        $beautybrands=$csv[1][6];
-        $beautyrating=$csv[1][7];
-        //$beautymakeupproducts=$csv[1][8];
-        $beautybeautytype=$csv[1][9];
+        $beautyProductName=$csv[1][1];
+        $beautydescription=$csv[1][2];
+        $beautyquantity=$csv[1][3];
+        //$beautyprice=$csv[1][4];
+        // $beautymanufacturingdate=$csv[1][5];
+        // $beautyexpirydate=$csv[1][6];
+        $beautybrands=$csv[1][7];
+        $beautyrating=$csv[1][8];
+        //$beautymakeupproducts=$csv[1][9];
+        $beautybeautytype=$csv[1][10];
 
         $object->setproductID($beautyproduct);
+        $object->setProductName($beautyProductName);
         $object->setdescription($beautydescription);
         $object->setQuantity($beautyquantity);
         //$object->setprice($beautyprice);
@@ -53,8 +52,9 @@ protected function execute(InputInterface $input, OutputInterface $output): int
         $object->setRatings($beautyrating);
         //$object->setMakeupProducts($makeupproducts);
         $object->setBeautyType($beautybeautytype);
-
+       // $object->setPublished(true);
         $object->save();
+
         return 0;
 }
 

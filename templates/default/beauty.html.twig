@@ -14,15 +14,25 @@
     </div>
 	<div class="container">
 	<br>
-		<div>
-			<a href="beauty" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
-			<a href="eyeliner" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Eyeliner</a>
-			<a href="lipstick" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Lipstick</a>
-			<a href="perfume" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Perfume</a>
-			<a href="shampoo" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Shampoo</a>
-		</div>
+        <div class="container-fluid d-flex justify-content-between">
+            <div>
+                <a href="beauty" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
+                <a href="eyeliner" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Eyeliner</a>
+                <a href="lipistick" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Lipstick</a>
+                <a href="perfume" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Perfume</a>
+                <a href="shampoo" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Shampoo</a>
+            </div>
+            <form class="d-flex" role="search" action="{{ path('searchBeauty')}}" method="POST">
+                <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success btn-md active" aria-pressed="true" type="submit">Search</button>
+            </form>
+        </div>
 		<br>
 		<div class="row row-cols-3 row-cols-md-3 g-4">
+            {# <h5 class="card-title">ProductName: {{ object.perfume[0].productName }}</h5>
+            <h5 class="card-title">ProductName: {{ object.shampoo[0].productName }}</h5>
+            <h5 class="card-title">ProductName: {{ object.lipstick[0].productName }}</h5>
+            <h5 class="card-title">ProductName: {{ object.eyeliner[0].productName }}</h5> #}
 			{% for object in object %}
 				<div class="col">
 					<div class="card h-100">
@@ -37,8 +47,8 @@
 								{{ object.getManufacturingDate}}</p>
 							<p class="card-text">Expiry Date :
 								{{ object.getExpiryDate }}</p>
-							<p class="card-text">Brand :
-								{{ object.getBrands }}</p>
+							{# <p class="card-text">Brand :
+								{{ object.getBrands }}</p> #}
 
                             <!--PRODUCT :: EYELINER  -->
 							 {% if object.getBeautyType=='Eyeliner' %} 
@@ -64,7 +74,7 @@
 									{{ object.getMakeupProducts.getPerfume.getFormulation }}</p>
 								<p class="card-text">Fragrance :
 									{{ object.getMakeupProducts.getPerfume.getFragrance }}</p>
-								<p class="card-text">Strenght :
+								<p class="card-text">Strength :
 									{{ object.getMakeupProducts.getPerfume.getStrenght}}</p>
 
                              <!--PRODUCT :: SHAMPOO -->
@@ -75,7 +85,6 @@
 									{{ object.getMakeupProducts.getShampoo.getKeyIngredients}}</p>
 								<p class="card-text">Preference :
 									{{ object.getMakeupProducts.getShampoo.getPreference }}</p> 
-
 
 							{% endif %}
 						</div>
