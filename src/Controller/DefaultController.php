@@ -468,6 +468,49 @@ class DefaultController extends FrontendController
     }
 
   
+    /**
+     * @Route("/allProducts/{page}", methods={"GET", "POST"})
+     * @param Request $request
+     * @return Response
+     */
+    public function allProductsAction($page): Response
+    {
+        $obj=[];
+        $pageItems = [];
+        
+        $items = new DataObject\Electronics\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $items = new DataObject\Clothing\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $items = new DataObject\Footwear\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $items = new DataObject\Beauty\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder('asc');
+        foreach ($items as $item) {
+            array_push($obj, $item);
+        }
+
+        $pageItems = array_slice($obj, ($page - 1) * 3, 3);
+        $totalPages = ceil(count($obj)/3);
+        return $this->render('default/allProducts.html.twig', ['object'=>$pageItems, 'number'=>$totalPages]);
+    }
+
 
 
 
@@ -529,5 +572,15 @@ class DefaultController extends FrontendController
     public function signupAction(Request $request): Response
     {
         return $this->render('default/signup.html.twig');
+    }
+
+     /**
+     * @Route("/cart", name="cart", methods={"GET"})
+     * @param Request $request
+     * @return Response
+     */
+    public function addToCartAction(Request $request): Response
+    {
+        return $this->render('default/cart.html.twig');
     }
 }

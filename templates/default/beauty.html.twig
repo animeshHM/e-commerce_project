@@ -53,13 +53,19 @@
 
 	<div class="container">
 	<br>
-		<div>
-			<a href="beauty" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
-			<a href="eyeliner" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Eyeliner</a>
-			<a href="lipstick" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Lipstick</a>
-			<a href="perfume" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Perfume</a>
-			<a href="shampoo" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Shampoo</a>
-		</div>
+		 <div class="container-fluid d-flex justify-content-between">
+            <div>
+                <a href="beauty" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
+                <a href="eyeliner" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Eyeliner</a>
+                <a href="lipistick" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Lipstick</a>
+                <a href="perfume" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Perfume</a>
+                <a href="shampoo" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Shampoo</a>
+            </div>
+            <form class="d-flex" role="search" action="{{ path('searchBeauty')}}" method="POST">
+                <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success btn-md active" aria-pressed="true" type="submit">Search</button>
+            </form>
+        </div>
 		<br>
 		<div class="row row-cols-3 row-cols-md-3 g-4">
 			{% for object in object %}
@@ -122,6 +128,7 @@
 
 							{% endif %}
 						</div>
+						   <a class="btn btn-outline-success" href="cart" role="button">Add to Cart</a>
 					</div>
 				</div>
 			{% endfor %}

@@ -51,15 +51,20 @@
        
 		<div class="container">
 			<br>
-			<div>
-				<a href="footwear" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
-				<a href="boots" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Boots</a>
-				<a href="heels" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Heels</a>
-				<a href="sandals" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Sandals</a>
-				<a href="sportsshoes" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Sports Shoes</a>
-				<a href="formalshoes" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Formal Shoes</a>
-
-			</div>
+			<div class="container-fluid d-flex justify-content-between">
+                <div>
+                    <a href="footwear" class="btn btn-dark btn-md active" role="button" aria-pressed="true">All</a>
+                    <a href="boots" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Boots</a>
+                    <a href="heels" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Heels</a>
+                    <a href="sandals" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Sandals</a>
+                    <a href="sportsshoes" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Sports Shoes</a>
+                    <a href="formalshoes" class="btn btn-secondary btn-md active" role="button" aria-pressed="true">Formal Shoes</a>
+                </div>
+                <form class="d-flex" role="search" action="{{ path('searchFootwear')}}" method="POST">
+                    <input class="form-control me-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success btn-md active" aria-pressed="true" type="submit">Search</button>
+                </form>
+            </div>
 			<br>
 
 			<div class="row row-cols-3 row-cols-md-3 g-4">
@@ -153,6 +158,7 @@
 									
 								{% endif %}
 							</div>
+							   <a class="btn btn-outline-success" href="cart" role="button">Add to Cart</a>
 						</div>
 					</div>
 				{% endfor %}
