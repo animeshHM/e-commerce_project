@@ -14,18 +14,14 @@ protected function configure()
 {
 $this
 ->setName('import:beauty')
-->setDescription('this command imports data');
-//  ->addArgument("class_name", InputArgument::REQUIRED);
+->setDescription('this command imports beauty data');
 }
 
 protected function execute(InputInterface $input, OutputInterface $output): int
 {
-//  $output->writeln("Class to import : " . $input->getArgument("class_name"));
-//  return Command::SUCCESS;
-
     $object = new Beauty();
     $object->setKey('Eyeliner20');
-    $object->setParentId(6);
+    $object->setParentId(58);
     $path = 'public/csv/beauty.csv';
     $file = file($path);
         foreach ($file as $k) {

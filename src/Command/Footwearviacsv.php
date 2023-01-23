@@ -14,18 +14,14 @@ class Footwearviacsv extends AbstractCommand {
     {
         $this
         ->setName('import:footwear')
-        ->setDescription('this command imports data');
-    //  ->addArgument("class_name", InputArgument::REQUIRED);
+        ->setDescription('this command imports footwear data');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-    //  $output->writeln("Class to import : " . $input->getArgument("class_name"));
-    //  return Command::SUCCESS;
-
     $object = new Footwear();
     $object->setKey('Heels20');
-    $object->setParentId(8);
+    $object->setParentId(60);
     $path = 'public/csv/footwear.csv';
     $file = file($path);
 
@@ -42,19 +38,13 @@ class Footwearviacsv extends AbstractCommand {
         $footwearquantity=$csv[1][7];
         $footwearbrands=$csv[1][8];
         $footwearrating=$csv[1][9];
-        //$beautymakeupproducts=$csv[1][8];
         $footwearfootweartype=$csv[1][10];
 
         $object->setproductName($footwearproductName);
         $object->setproductID($footwearproductId);
         $object->setdescription($footweardescription);
         $object->setQuantity($footwearquantity);
-        //$object->setprice($beautyprice);
-        // $object->setManufacturingDate($beautymanufacturingdate);
-        // $object->setExpiryDate($beautyexpirydate);
         $object->setBrand($footwearbrands);
-       // $object->setRating($footwearrating);
-        //$object->setMakeupProducts($makeupproducts);
         $object->setFootwearType($footwearfootweartype);
 
         $object->save();
