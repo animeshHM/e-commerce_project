@@ -58,7 +58,7 @@ class DefaultController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function clothingAction(Request $request): Response
+    public function clothingAction(Request $request ): Response
     {
         $items = new DataObject\Clothing\Listing();
         $items->setOrderKey("RAND()", false);
@@ -477,7 +477,7 @@ class DefaultController extends FrontendController
     {
         $obj=[];
         $pageItems = [];
-        
+
         $items = new DataObject\Electronics\Listing();
         $items->setOrderKey("productName");
         $items->setOrder('asc');
