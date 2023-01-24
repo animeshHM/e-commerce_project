@@ -42,19 +42,10 @@ class MyController extends FrontendController
      */
     public function electronicsDisplayAction(Request $request): Response
     {
-        $items = new DataObject\Electronics\Listing();
-
-        foreach ($items as $key => $item) {
-            $data[] = array(
-                "productId" => $item->getProductID(),
-                "productName" => $item->getProductName(),
-                "productImage" => $item->getProductImage()->getFullPath(),
-                "description" => $item->getDescription(),
-                "clothingType" => $item->getelectronicsType()
-            );
-        }
-
-        return $this->json(["success" => true, "data" => $data]);
+        $items = new ObjectListingService();
+        $item = $items->electronicsJsonDataAction();
+        $object = json_decode($item);
+        return $this->json($object);
     }
 
     /**

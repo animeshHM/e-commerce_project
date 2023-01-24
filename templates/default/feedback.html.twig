@@ -7,14 +7,14 @@
 	</head>
 	<title>Avira</title>
 
-	<body style="background-color:#B2B2B2">
-		{{pimcore_snippet("header",)}}
+	<body style="background-color:#551606">
+		{% include 'default/header.html.twig' %}
 		<br><br>
 
 		<!-- FEEDBACK FORM-->
 		<div class="container-sm">
 			<form class="text-center border border-light p-5" action="{{ path('submit') }}" method="POST">
-				<h1>
+				<h1 style="color:white;">
 					<center>FEEDBACK FORM</center>
 				</h1><br><br>
 				<!-- Name -->
@@ -36,7 +36,7 @@
 			</form>
 		</div>
 		<br><br>
-		{{pimcore_snippet("footer",)}}
+		{% include 'default/footer.html.twig' %}
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 	</body>
 </html>

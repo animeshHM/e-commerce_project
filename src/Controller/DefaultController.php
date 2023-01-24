@@ -8,7 +8,7 @@ use Pimcore\Model\DataObject;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Service\DefaultService;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class DefaultController extends FrontendController
 {
@@ -59,10 +59,9 @@ class DefaultController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function allProductsAction($page): Response
+    public function allProductsAction(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $obj=[];
-        $pageItems = [];
         $items = new DataObject\Electronics\Listing();
         $items->setOrderKey("productName");
         $items->setOrder('asc');
@@ -91,9 +90,16 @@ class DefaultController extends FrontendController
             array_push($obj, $item);
         }
 
-        $pageItems = array_slice($obj, ($page - 1) * 3, 3);
-        $totalPages = ceil(count($obj)/3);
-        return $this->render('default/allProducts.html.twig', ['object'=>$pageItems, 'number'=>$totalPages]);
+        $paginator = $paginator->paginate(
+            $obj,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render('default/allProducts.html.twig', [
+            'paginator' => $paginator,
+            'paginationVariables' => $paginator->getPaginationData()
+        ]);
     }
 
 
@@ -144,11 +150,23 @@ class DefaultController extends FrontendController
         $ob->save();
 
         $mail=new \Pimcore\Mail();
-        $mail->to('fortesting@gmail.com');
-        $mail->text("this is testing mail");
+        $mail->to('team6testpimcore@gmail.com');
+        $mail->setDocument('/contact-us');
         $mail->send();
 
         return $this->render('default/home.html.twig');
+    }
+
+    /**
+    * @Template
+    * @param Request $request
+    * @return Response
+    */
+    public function contactAction(Request $request)
+    {
+        $attributes = $request->attributes->all();
+
+        return $this->render('default/contact-us.html.twig', ['attributes'=>$attributes]);
     }
 
     /**
@@ -160,4 +178,5 @@ class DefaultController extends FrontendController
     {
         return $this->render('default/cart.html.twig');
     }
+
 }

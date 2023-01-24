@@ -292,6 +292,90 @@ class ObjectListingService
         return $sportsshoes;
     }
 
+    public function electronicsJsonDataAction()
+    {
+        $items = new DataObject\Electronics\Listing();
+        $items->setOrderKey("productName");
+        $items->setOrder("asc");
+        $laptop = [];
+        $mobile = [];
+        $television = [];
+        $refrigerator = [];
+        foreach ($items as $item) {
+            if ($item->getElectronicsType() == 'Laptop') {
+
+                $dataOneObj = [
+                    'productName' => $item->getProductName(),
+                    'productImage' => $item->getProductImage()->getFullPath(),
+                    'type' => $item->getElectronicsType(),
+                    'description' => $item->getDescription(),
+                    'brand' => $item->getElectronicItem()->getLaptop()->getBrand(),
+                    'battery' => $item->getElectronicItem()->getLaptop()->getBattery(),
+                    'displayType' => $item->getElectronicItem()->getLaptop()->getDisplayType(),
+                    'cpuType' => $item->getElectronicItem()->getLaptop()->getCPUType(),
+                    'screenSize' => $item->getElectronicItem()->getLaptop()->getScreenSize(),
+                    'operatingSystem' => $item->getElectronicItem()->getLaptop()->getOperatingSystem(),
+                ];
+
+                $laptop[] = $dataOneObj;
+
+            } elseif ($item->getElectronicsType() == 'Mobile') {
+
+                $dataOneObj = [
+                    'productName' => $item->getProductName(),
+                    'productImage' => $item->getProductImage()->getFullPath(),
+                    'type' => $item->getElectronicsType(),
+                    'description' => $item->getDescription(),
+                    'brand' => $item->getElectronicItem()->getMobile()->getBrand(),
+                    'battery' => $item->getElectronicItem()->getMobile()->getBattery(),
+                    'displayType' => $item->getElectronicItem()->getMobile()->getStorage(),
+                    'refreshRate' => $item->getElectronicItem()->getMobile()->getRefreshRate(),
+                    'operatingSystem' => $item->getElectronicItem()->getMobile()->getDisplayType(),
+                ];
+
+                $mobile[] = $dataOneObj;
+
+            } elseif ($item->getElectronicsType() == 'Television') {
+
+                $dataOneObj = [
+                    'productName' => $item->getProductName(),
+                    'productImage' => $item->getProductImage()->getFullPath(),
+                    'type' => $item->getElectronicsType(),
+                    'description' => $item->getDescription(),
+                    'brand' => $item->getElectronicItem()->getTelevision()->getBrand(),
+                    'screenSize' => $item->getElectronicItem()->getTelevision()->getScreenSize(),
+                    'resolution' => $item->getElectronicItem()->getTelevision()->getResolution(),
+                    'soundTechnology' => $item->getElectronicItem()->getTelevision()->getSoundTechnology(),
+                    'mountingType' => $item->getElectronicItem()->getTelevision()->getMountingType(),
+                    'displayType' => $item->getElectronicItem()->getTelevision()->getDisplayType(),
+                ];
+
+                $television[] = $dataOneObj;
+
+            } elseif ($item->getElectronicsType() == 'Refrigerator') {
+
+                $dataOneObj = [
+                    'productName' => $item->getProductName(),
+                    'productImage' => $item->getProductImage()->getFullPath(),
+                    'type' => $item->getElectronicsType(),
+                    'description' => $item->getDescription(),
+                    'brand' => $item->getElectronicItem()->getRefrigerator()->getBrand(),
+                    'capacity' => $item->getElectronicItem()->getRefrigerator()->getCapacity(),
+                    'doorCount' => $item->getElectronicItem()->getRefrigerator()->getDoorCount(),
+                    'starRating' => $item->getElectronicItem()->getRefrigerator()->getStarRating(),
+                    'refrigeratorType' => $item->getElectronicItem()->getRefrigerator()->getRefrigeratorType(),
+                    'defrostingType' => $item->getElectronicItem()->getRefrigerator()->getDefrostingType(),
+                ];
+
+                $refrigerator[] = $dataOneObj;
+
+            }
+        }
+
+        return json_encode(['laptop' => $laptop, 'mobile' => $mobile,
+                                'television' => $television, 'refrigerator' => $refrigerator]);
+    }
+
     public function beautyJsonDataAction()
     {
         $items = new DataObject\Beauty\Listing();
