@@ -17,12 +17,24 @@ class SearchController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function searchElectronics(Request $request): Response
+    public function searchElectronics(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
+        $list = [];
         $str = $request->get("search");
         $items = new DataObject\Electronics\Listing();
         $items->setCondition("description LIKE ?", ["%$str%"]);
-        return $this->render('default/electronics.html.twig', ['object'=>$items]);
+        foreach ($items as $item) {
+            array_push($list, $item);
+        }
+        $paginator = $paginator->paginate(
+            $list,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render('default/electronics.html.twig', 
+        ['object' => $paginator,
+        'paginationVariables' => $paginator->getPaginationData()]);
+        
     }
 
     /**
@@ -30,12 +42,24 @@ class SearchController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function searchBeauty(Request $request): Response
+    public function searchBeauty(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
+        $list = [];
         $str = $request->get("search");
         $items = new DataObject\Beauty\Listing();
         $items->setCondition("description LIKE ?", ["%$str%"]);
-        return $this->render('default/beauty.html.twig', ['object'=>$items]);
+        foreach ($items as $item) {
+            array_push($list, $item);
+        }
+        $paginator = $paginator->paginate(
+            $list,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render('default/beauty.html.twig', 
+        ['object' => $paginator,
+        'paginationVariables' => $paginator->getPaginationData()]);
+        
     }
 
     /**
@@ -43,12 +67,24 @@ class SearchController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function searchFootwear(Request $request): Response
+    public function searchFootwear(Request $request , \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
+        $list = [];
         $str = $request->get("search");
         $items = new DataObject\Footwear\Listing();
         $items->setCondition("description LIKE ?", ["%$str%"]);
-        return $this->render('default/footwear.html.twig', ['object'=>$items]);
+        foreach ($items as $item) {
+            array_push($list, $item);
+        }
+        $paginator = $paginator->paginate(
+            $list,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render('default/footwear.html.twig', 
+        ['object' => $paginator,
+        'paginationVariables' => $paginator->getPaginationData()]);
+        
     }
 
     /**
@@ -56,11 +92,22 @@ class SearchController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function searchClothing(Request $request): Response
+    public function searchClothing(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
+        $list = [];
         $str = $request->get("search");
         $items = new DataObject\Clothing\Listing();
         $items->setCondition("description LIKE ?", ["%$str%"]);
-        return $this->render('default/clothing.html.twig', ['object'=>$items]);
+        foreach ($items as $item) {
+            array_push($list, $item);
+        }
+        $paginator = $paginator->paginate(
+            $list,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render('default/clothing.html.twig', 
+        ['object' => $paginator,
+        'paginationVariables' => $paginator->getPaginationData()]);
     }
 }

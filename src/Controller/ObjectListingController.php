@@ -46,11 +46,24 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function mobileAction(Request $request): Response
+    public function mobileAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->mobileDataAction();
-        return $this->render('default/electronics.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/electronics.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/electronics.html.twig', ['object' => $items]);
     }
 
     /**
@@ -58,11 +71,24 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function laptopAction(Request $request): Response
+    public function laptopAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->laptopDataAction();
-        return $this->render('default/electronics.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/electronics.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/electronics.html.twig', ['object' => $items]);
     }
 
     /**
@@ -70,11 +96,24 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function refrigeratorAction(Request $request): Response
+    public function refrigeratorAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->refrigeratorDataAction();
-        return $this->render('default/electronics.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/electronics.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/electronics.html.twig', ['object' => $items]);
     }
 
     /**
@@ -82,11 +121,24 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function televisionAction(Request $request): Response
+    public function televisionAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->televisionDataAction();
-        return $this->render('default/electronics.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/electronics.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/electronics.html.twig', ['object' => $items]);
     }
 
 
@@ -128,11 +180,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function topWearAction(Request $request): Response
+    public function topWearAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->topWearDataAction();
-        return $this->render('default/clothing.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/clothing.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
     }
 
     /**
@@ -140,11 +204,24 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function bottomWearAction(Request $request): Response
+    public function bottomWearAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->bottomWearDataAction();
-        return $this->render('default/clothing.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/clothing.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+       
     }
 
     /**
@@ -152,11 +229,24 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function ethnicWearAction(Request $request): Response
+    public function ethnicWearAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->ethnicWearDataAction();
-        return $this->render('default/clothing.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/clothing.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/clothing.html.twig', ['object' => $items]);
     }
 
     /**
@@ -164,11 +254,24 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function menClothingAction(Request $request): Response
+    public function menClothingAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->menClothingDataAction();
-        return $this->render('default/clothing.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/clothing.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/clothing.html.twig', ['object' => $items]);
     }
 
     /**
@@ -176,12 +279,31 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function womenClothingAction(Request $request): Response
+    public function womenClothingAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->womenClothingDataAction();
-        return $this->render('default/clothing.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+
+        return $this->render(
+            'default/clothing.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/clothing.html.twig', ['object' => $items]);
     }
+
+
+
+
+
+
 
     /**
      * @Route("/beauty", name="beauty", methods={"GET"})
@@ -216,11 +338,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function eyelinerAction(Request $request): Response
+    public function eyelinerAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->eyelinerDataAction();
-        return $this->render('default/beauty.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/beauty.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/beauty.html.twig', ['object' => $items]);
     }
 
     /**
@@ -228,11 +362,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function lipstickAction(Request $request): Response
+    public function lipstickAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->lipstickDataAction();
-        return $this->render('default/beauty.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/beauty.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/beauty.html.twig', ['object' => $items]);
     }
 
     /**
@@ -240,11 +386,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function perfumeAction(Request $request): Response
+    public function perfumeAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->perfumeDataAction();
-        return $this->render('default/beauty.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/beauty.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/beauty.html.twig', ['object' => $items]);
     }
 
     /**
@@ -252,12 +410,29 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function shampooAction(Request $request): Response
+    public function shampooAction(Request $request,  \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
-        $item = new DataObject\Beauty\Listing();
+        $item = new ObjectListingService;
         $items = $item->shampooDataAction();
-        return $this->render('default/beauty.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/beauty.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/beauty.html.twig', ['object' => $items]);
     }
+
+
+
+
+
 
     /**
      * @Route("/footwear", name="footwear", methods={"GET"})
@@ -292,11 +467,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function bootsAction(Request $request): Response
+    public function bootsAction(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->bootsDataAction();
-        return $this->render('default/footwear.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/footwear.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/footwear.html.twig', ['object' => $items]);
     }
 
     /**
@@ -304,11 +491,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function heelsAction(Request $request): Response
+    public function heelsAction(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->heelsDataAction();
-        return $this->render('default/footwear.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/footwear.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/footwear.html.twig', ['object' => $items]);
     }
 
     /**
@@ -316,11 +515,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function sandalsAction(Request $request): Response
+    public function sandalsAction(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->sandalsDataAction();
-        return $this->render('default/footwear.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/footwear.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/footwear.html.twig', ['object' => $items]);
     }
 
     /**
@@ -328,11 +539,23 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function formalshoesAction(Request $request): Response
+    public function formalshoesAction(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->formalshoesDataAction();
-        return $this->render('default/footwear.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/footwear.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/footwear.html.twig', ['object' => $items]);
     }
 
     /**
@@ -340,10 +563,22 @@ class ObjectListingController extends FrontendController
      * @param Request $request
      * @return Response
      */
-    public function sportsshoesAction(Request $request): Response
+    public function sportsshoesAction(Request $request, \Knp\Component\Pager\PaginatorInterface $paginator): Response
     {
         $item = new ObjectListingService;
         $items = $item->sportsshoesDataAction();
-        return $this->render('default/footwear.html.twig', ['object' => $items]);
+        $paginator = $paginator->paginate(
+            $items,
+            $request->get('page', 1),
+            3
+        );
+        return $this->render(
+            'default/footwear.html.twig',
+            [
+                'object' => $paginator,
+                'paginationVariables' => $paginator->getPaginationData()
+            ]
+        );
+        // return $this->render('default/footwear.html.twig', ['object' => $items]);
     }
 }
