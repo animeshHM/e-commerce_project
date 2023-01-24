@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Pimcore\Model\DataObject\Electronics;
 use Pimcore\Model\DataObject\Electronics\Listing;
+use Pimcore\Model\DataObject\Feedback;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends FrontendController
@@ -502,6 +503,35 @@ class DefaultController extends FrontendController
     {
         return $this->render('default/signup.html.twig');
     }
+
+    /**
+     * @Route("/submit", name="submit", methods={"POST"})
+     * @param Request $request
+     * @return Response
+     */
+     public function submit(Request $request): Response
+
+     {
+ 
+         $ob = new Feedback;
+         $key = "feedback".time();
+         $ob->setKey($key);
+         $ob->setParentId(25);
+         $ob->setName($_POST["Name"]);
+         $ob->setEmail($_POST["Email"]);
+         $ob->setMessage($_POST["Message"]);
+         $ob->save();
+ 
+         $mail=new \Pimcore\Mail();
+         $mail->to('fortesting@gmail.com');
+        //  $mail->setDocument('default/feedback.html.twig');
+        //  $mail->text("this is testing mail");
+         $mail->setDocument('/emails/contact-us');
+         $mail->send();
+
+         return $this->render('default/home.html.twig');
+ 
+     }
 }
 
 

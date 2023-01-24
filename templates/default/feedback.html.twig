@@ -5,48 +5,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	</head>
-	<title>Ecommerce</title>
+	<title>Avira</title>
 
-<body style="background-color:#B2B2B2">
-{{pimcore_snippet("header",)}}
-<br><br>
+	<body style="background-color:#B2B2B2">
+		{{pimcore_snippet("header",)}}
+		<br><br>
 
-<!-- Default form contact -->
-<div class="container-sm">
-<form class="text-center border border-light p-5" action="#!">
-    <h1><center>FEEDBACK FORM</center></h1><br><br>
-    <!-- Name -->
-    <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name">
+		<!-- FEEDBACK FORM-->
+		<div class="container-sm">
+			<form class="text-center border border-light p-5" action="{{ path('submit') }}" method="POST">
+				<h1>
+					<center>FEEDBACK FORM</center>
+				</h1><br><br>
+				<!-- Name -->
+				<input
+				type="text" id="Name" name="Name" class="form-control mb-4" placeholder="Name">
 
-    <!-- Email -->
-    <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
+				<!-- Email -->
+				<input
+				type="email" id="Email" name="Email" class="form-control mb-4" placeholder="E-mail">
 
-    <!-- Message -->
-    <div class="form-group">
-        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message"></textarea>
-    </div>
-    <br><br>
-    
-    <!-- Copy -->
-    <div class="custom-control custom-checkbox mb-4">
-        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-        <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
-    </div>
+				<!-- Message -->
+				<div class="form-group">
+					<textarea class="form-control rounded-0" id="Message" name="Message" rows="3" placeholder="Message"></textarea>
+				</div>
+				<br>
 
-    <!-- Send button -->
-    <button class="btn btn-info btn-block" type="submit"><a href="http://ecom/email">Submit</button>
-
-</form>
-</div>
-<!-- Default form contact -->
-
-   
-
-
-
-
-
-<br><br>
-{{pimcore_snippet("footer",)}}
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+				<!-- Send button -->
+				{# <button class="btn btn-info btn-block" type="submit"><a href="http://ecommerce/submit">Submit</button></a> #}
+                <button class="btn btn-info btn-block" type="submit">Submit</button>
+			</form>
+		</div>
+		<br><br>
+		{{pimcore_snippet("footer",)}}
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	</body>
+</html>

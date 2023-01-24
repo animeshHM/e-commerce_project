@@ -28,11 +28,7 @@
 					<div class="card h-100">
 						<img src="{{ object.getProductImage }}" class="rounded card-img-top" alt="..." height="340px" width="80px";> 
 						<div class="card-body">
-							{# <h5 class="card-title">ProductName: {{ object.getProductName }}</h5> #}
-							<p class="card-text">Product ID :
-								{{ object.getProductID }}</p>
-							{# <p class="card-text">Product Image :
-								{{ object.getProductImage }}</p> #}
+							<h5 class="card-title">ProductName: {{ object.getProductName }}</h5>
 							<p class="card-text">Description :
 								{{ object.getDescription }}</p>
 							<p class="card-text" style="color:green;">Price :
@@ -41,7 +37,7 @@
 								{{ object.getManufacturingDate}}</p>
 							<p class="card-text">Expiry Date :
 								{{ object.getExpiryDate }}</p>
-							<p class="card-text">Brands :
+							<p class="card-text">Brand :
 								{{ object.getBrands }}</p>
 
                             <!--PRODUCT :: EYELINER  -->
@@ -83,6 +79,7 @@
 
 							{% endif %}
 						</div>
+                        <button type="button" class="btn btn-outline-success">Add to Cart</button>
 					</div>
 				</div>
 			{% endfor %}

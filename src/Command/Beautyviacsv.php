@@ -24,27 +24,19 @@ class   Beautyviacsv extends AbstractCommand {
 //  return Command::SUCCESS;
 
 $object=new Beauty();
-
 $object->setKey('Eyeliner2');
-
 $object->setParentId(15);
-
 $path = 'public/csv/beauty.csv';
-
     $file = file($path);
-
         foreach ($file as $k) {
-
             $csv[] = explode(',', $k);
-
         }
-
         $beautyproduct=$csv[1][0];
         $beautydescription=$csv[1][1];
         $beautyquantity=$csv[1][2];
         //$beautyprice=$csv[1][3];
-        // $beautymanufacturingdate=$csv[1][4];
-        // $beautyexpirydate=$csv[1][5];
+        //$beautymanufacturingdate=$csv[1][4];
+        //$beautyexpirydate=$csv[1][5];
         $beautybrands=$csv[1][6];
         $beautyrating=$csv[1][7];
         //$beautymakeupproducts=$csv[1][8];
@@ -54,8 +46,8 @@ $path = 'public/csv/beauty.csv';
         $object->setdescription($beautydescription);
         $object->setQuantity($beautyquantity);
         //$object->setprice($beautyprice);
-        // $object->setManufacturingDate($beautymanufacturingdate);
-        // $object->setExpiryDate($beautyexpirydate);
+        //$object->setManufacturingDate($beautymanufacturingdate);
+        //$object->setExpiryDate($beautyexpirydate);
         $object->setBrands($beautybrands);
         $object->setRatings($beautyrating);
         //$object->setMakeupProducts($makeupproducts);

@@ -57,10 +57,10 @@ $path = 'public/csv/footwear.csv';
         $object->setdescription($footweardescription);
         $object->setQuantity($footwearquantity);
         //$object->setprice($beautyprice);
-        // $object->setManufacturingDate($beautymanufacturingdate);
-        // $object->setExpiryDate($beautyexpirydate);
+        //$object->setManufacturingDate($beautymanufacturingdate);
+        //$object->setExpiryDate($beautyexpirydate);
         $object->setBrand($footwearbrands);
-       // $object->setRating($footwearrating);
+        //$object->setRating($footwearrating);
         //$object->setMakeupProducts($makeupproducts);
         $object->setFootwearType($footwearfootweartype);
         
