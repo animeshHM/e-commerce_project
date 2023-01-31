@@ -506,8 +506,8 @@ class DefaultController extends FrontendController
             array_push($obj, $item);
         }
 
-        $pageItems = array_slice($obj, ($page - 1) * 3, 3);
-        $totalPages = ceil(count($obj)/3);
+        $pageItems = array_slice($obj, ($page - 1) * 6, 6);
+        $totalPages = ceil(count($obj)/6);
         return $this->render('default/allProducts.html.twig', ['object'=>$pageItems, 'number'=>$totalPages]);
     }
 
